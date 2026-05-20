@@ -51,7 +51,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute inset-0 bg-gradient-to-b from-tg-black/40 via-transparent to-tg-black/70"
         />
 
-        <Container className="relative z-10 flex min-h-[75vh] flex-col justify-center py-28 md:py-36">
+        <Container className="relative z-10 flex min-h-[75vh] flex-col justify-center py-16 sm:py-24 md:py-36">
           <div className="grid items-center gap-14 md:grid-cols-12">
             <div className="md:col-span-7 [animation:var(--animate-fade-up)]">
               <SectionTitle eyebrow={aboutHero.eyebrow} tone="cream">
@@ -88,7 +88,7 @@ export default function AboutPage() {
                     className="h-auto w-full"
                   />
                 </div>
-                <p className="mt-5 text-center font-display uppercase tracking-[0.28em] text-[11px] text-tg-cream/60">
+                <p className="mt-5 text-center font-display uppercase tracking-[0.28em] text-xs text-tg-cream/60">
                   {aboutHero.imageCaption}
                 </p>
               </div>
@@ -199,7 +199,7 @@ export default function AboutPage() {
             <Reveal>
               <figure className="mx-auto max-w-4xl text-center">
                 <span
-                  className="block font-serif text-7xl md:text-8xl leading-none text-tg-orange/80"
+                  className="block font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none text-tg-orange/80"
                   aria-hidden
                 >
                   &ldquo;
@@ -326,7 +326,7 @@ export default function AboutPage() {
           aria-hidden
         />
         <Container>
-          <div className="relative z-10 flex flex-col items-center gap-10 py-28 md:py-40 text-center">
+          <div className="relative z-10 flex flex-col items-center gap-10 py-16 sm:py-24 md:py-40 text-center">
             <Reveal>
               <h2 className="font-display uppercase leading-[0.9] tracking-[-0.01em] text-6xl md:text-8xl lg:text-9xl text-tg-cream">
                 See you <span className="text-tg-orange">soon.</span>

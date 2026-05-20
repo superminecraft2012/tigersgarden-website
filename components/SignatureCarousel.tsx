@@ -49,7 +49,7 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
                 ].join(" ")}
                 style={{ width: CARD_W }}
               >
-                <div className="flex h-[300px] md:h-[320px]">
+                <div className="flex h-[240px] sm:h-[280px] md:h-[320px]">
                   {/* Food image, left 42% */}
                   <div className="relative w-[42%] shrink-0 overflow-hidden">
                     <Image
@@ -118,14 +118,14 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
       <button
         onClick={() => goTo(active - 1)}
         aria-label="Previous dish"
-        className="absolute left-3 md:left-6 top-[calc(50%-52px)] z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/25 text-white text-xl hover:bg-white/45 transition-colors duration-200"
+        className="absolute left-3 md:left-6 top-[calc(50%-52px)] z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/25 text-white text-xl hover:bg-white/45 transition-colors duration-200"
       >
         ‹
       </button>
       <button
         onClick={() => goTo(active + 1)}
         aria-label="Next dish"
-        className="absolute right-3 md:right-6 top-[calc(50%-52px)] z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/25 text-white text-xl hover:bg-white/45 transition-colors duration-200"
+        className="absolute right-3 md:right-6 top-[calc(50%-52px)] z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/25 text-white text-xl hover:bg-white/45 transition-colors duration-200"
       >
         ›
       </button>
@@ -134,7 +134,7 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
       <div
         role="tablist"
         aria-label="Signature dishes"
-        className="mt-10 flex justify-center items-center gap-2.5"
+        className="mt-10 flex justify-center items-center gap-0.5"
       >
         {items.map((item, i) => (
           <button
@@ -143,12 +143,17 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
             aria-selected={i === active}
             aria-label={item.name}
             onClick={() => goTo(i)}
-            className={`rounded-full border-2 border-white transition-all duration-300 h-3.5 w-3.5 ${
-              i === active
-                ? "bg-white scale-110"
-                : "bg-transparent hover:bg-white/40"
-            }`}
-          />
+            className="grid place-items-center w-11 h-11 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          >
+            <span
+              aria-hidden
+              className={`rounded-full border-2 border-white transition-all duration-300 h-3.5 w-3.5 ${
+                i === active
+                  ? "bg-white scale-110"
+                  : "bg-transparent hover:bg-white/40"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>

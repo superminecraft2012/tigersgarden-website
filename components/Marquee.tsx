@@ -14,7 +14,7 @@ export function Marquee({ items, className = "", separator = "✦" }: Props) {
         {seq.map((text, i) => (
           <span
             key={i}
-            className="mx-8 inline-flex items-center gap-8 font-display uppercase tracking-[0.4em] text-tg-cream/80 text-sm"
+            className="mx-4 sm:mx-8 inline-flex items-center gap-4 sm:gap-8 font-display uppercase tracking-[0.4em] text-tg-cream/80 text-sm"
           >
             {text}
             <span className="text-tg-orange" aria-hidden>
@@ -30,7 +30,7 @@ export function Marquee({ items, className = "", separator = "✦" }: Props) {
         {seq.map((text, i) => (
           <span
             key={i}
-            className="mx-8 inline-flex items-center gap-8 font-display uppercase tracking-[0.4em] text-tg-cream/80 text-sm"
+            className="mx-4 sm:mx-8 inline-flex items-center gap-4 sm:gap-8 font-display uppercase tracking-[0.4em] text-tg-cream/80 text-sm"
           >
             {text}
             <span className="text-tg-orange">{separator}</span>

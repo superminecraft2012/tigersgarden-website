@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Anton, Inter, Italiana } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -46,6 +46,12 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0e0d0c",
 };
 
 export default function RootLayout({

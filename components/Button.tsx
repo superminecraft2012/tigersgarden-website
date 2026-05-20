@@ -4,7 +4,7 @@ import { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "react";
 type Variant = "primary" | "ghost" | "outline";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-display uppercase tracking-[0.15em] text-sm transition-all duration-300 ease-[var(--ease-fierce)] focus:outline-none focus-visible:ring-2 focus-visible:ring-tg-orange focus-visible:ring-offset-2 focus-visible:ring-offset-tg-black";
+  "inline-flex items-center justify-center gap-2 rounded-full font-display uppercase tracking-[0.15em] text-sm min-h-[44px] touch-manipulation transition-all duration-300 ease-[var(--ease-fierce)] focus:outline-none focus-visible:ring-2 focus-visible:ring-tg-orange focus-visible:ring-offset-2 focus-visible:ring-offset-tg-black";
 
 const variants: Record<Variant, string> = {
   primary:

@@ -28,10 +28,10 @@ export function Reviews() {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
           {reviews.map((r, i) => (
             <Reveal key={r.author} delay={0.08 * i}>
-              <figure className="relative h-full flex flex-col gap-5 p-8 md:p-10 rounded-2xl bg-white border border-tg-black/8 hover:border-tg-orange/30 shadow-sm hover:shadow-md transition-all duration-500">
+              <figure className="relative h-full flex flex-col gap-5 p-6 sm:p-8 md:p-10 rounded-2xl bg-white border border-tg-black/8 hover:border-tg-orange/30 shadow-sm hover:shadow-md transition-all duration-500">
                 <span
                   aria-hidden
-                  className="absolute -top-4 -left-2 font-display text-7xl text-tg-orange/30 leading-none select-none"
+                  className="absolute -top-4 -left-2 font-display text-5xl sm:text-6xl md:text-7xl text-tg-orange/30 leading-none select-none"
                 >
                   &ldquo;
                 </span>

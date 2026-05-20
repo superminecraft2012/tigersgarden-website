@@ -26,15 +26,15 @@ export function MenuBrowser({ categories, categoryTaglines, items }: Props) {
       {/* Sticky category tabs */}
       <nav
         aria-label="Menu categories"
-        className="sticky top-[76px] z-40 bg-white/95 backdrop-blur-md border-b border-tg-black/10 shadow-sm"
+        className="sticky top-16 sm:top-[76px] z-40 bg-white/95 backdrop-blur-md border-b border-tg-black/10 shadow-sm"
       >
         <Container>
-          <ul className="flex items-center gap-1 overflow-x-auto tg-scrollbar-hide py-2">
+          <ul className="flex items-center gap-1 overflow-x-auto tg-scrollbar-hide py-2 px-1 -mx-1">
             {categories.map((c) => (
               <li key={c} className="shrink-0">
                 <button
                   onClick={() => setActive(c)}
-                  className={`relative px-4 py-2.5 font-display uppercase tracking-[0.18em] text-xs whitespace-nowrap transition-colors duration-200 rounded-full ${
+                  className={`relative px-4 py-3 font-display uppercase tracking-[0.18em] text-xs whitespace-nowrap transition-colors duration-200 rounded-full touch-manipulation ${
                     active === c
                       ? "bg-tg-orange text-white"
                       : "text-tg-black/60 hover:text-tg-black hover:bg-tg-black/5"
@@ -51,7 +51,7 @@ export function MenuBrowser({ categories, categoryTaglines, items }: Props) {
       {/* Spice legend */}
       <div className="border-b border-tg-black/10 bg-white/95 backdrop-blur-md">
         <Container>
-          <div className="flex items-center gap-4 py-2 text-[11px] text-tg-black/50 font-display uppercase tracking-[0.18em]">
+          <div className="flex items-center gap-4 py-2 text-xs text-tg-black/50 font-display uppercase tracking-[0.18em]">
             <span>Spice:</span>
             <span className="flex items-center gap-1 text-tg-orange">▲<span className="text-tg-black/50 normal-case tracking-normal font-sans font-normal">Mild</span></span>
             <span className="flex items-center gap-1 text-tg-orange">▲▲<span className="text-tg-black/50 normal-case tracking-normal font-sans font-normal">Medium</span></span>

@@ -87,7 +87,7 @@ export function Header() {
         <button
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="md:hidden text-tg-cream"
+          className="md:hidden inline-flex items-center justify-center text-tg-cream min-h-[44px] min-w-[44px] p-2 -mr-2 touch-manipulation"
           onClick={() => setOpen((v) => !v)}
         >
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">

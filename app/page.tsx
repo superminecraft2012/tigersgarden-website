@@ -97,7 +97,7 @@ export default function HomePage() {
             </span>
 
             <h1
-              className="font-display uppercase leading-[0.86] tracking-[-0.02em] text-[clamp(3.5rem,11vw,9.5rem)] text-tg-cream opacity-0 [animation:var(--animate-fade-up)]"
+              className="font-display uppercase break-words leading-[0.86] tracking-[-0.02em] text-[clamp(3.5rem,11vw,9.5rem)] text-tg-cream opacity-0 [animation:var(--animate-fade-up)]"
               style={{ animationDelay: "0.1s" }}
             >
               Tiger&rsquo;s Garden
@@ -456,7 +456,7 @@ export default function HomePage() {
           </Reveal>
 
           {/* Map embed */}
-          <Reveal delay={0.2} className="mt-10 overflow-hidden rounded-2xl border border-white/20 h-72 md:h-80">
+          <Reveal delay={0.2} className="mt-10 overflow-hidden rounded-2xl border border-white/20 h-56 sm:h-72 md:h-80">
             <GoogleMap />
           </Reveal>
         </Container>

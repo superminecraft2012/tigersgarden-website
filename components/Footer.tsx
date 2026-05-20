@@ -37,7 +37,7 @@ export function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tg-link font-display uppercase tracking-[0.2em] text-xs text-tg-cream/80"
+                  className="tg-link font-display uppercase tracking-[0.2em] text-sm text-tg-cream/80"
                 >
                   {s.label}
                 </a>
@@ -46,7 +46,7 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="font-display uppercase tracking-[0.3em] text-xs text-tg-orange mb-5">
+            <h4 className="font-display uppercase tracking-[0.3em] text-sm text-tg-orange mb-5">
               Find Us
             </h4>
             <p className="font-display uppercase tracking-[0.15em] text-tg-cream text-sm">
@@ -74,13 +74,13 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="font-display uppercase tracking-[0.3em] text-xs text-tg-orange mb-5">
+            <h4 className="font-display uppercase tracking-[0.3em] text-sm text-tg-orange mb-5">
               Hours
             </h4>
             <ul className="space-y-2 text-sm">
               {primary.hours.business.map((h) => (
                 <li key={h.days} className="text-tg-cream/70">
-                  <span className="block font-display uppercase tracking-[0.1em] text-tg-cream text-[11px]">
+                  <span className="block font-display uppercase tracking-[0.1em] text-tg-cream text-xs">
                     {h.days}
                   </span>
                   <span className="tabular-nums">{h.time}</span>
@@ -90,7 +90,7 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="font-display uppercase tracking-[0.3em] text-xs text-tg-orange mb-5">
+            <h4 className="font-display uppercase tracking-[0.3em] text-sm text-tg-orange mb-5">
               Browse
             </h4>
             <ul className="space-y-3">

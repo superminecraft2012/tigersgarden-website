@@ -115,7 +115,9 @@ body {
   transform-origin: right;
   transition: transform 0.4s var(--ease-fierce);
 }
-.tg-link:hover::after {
+.tg-link:hover::after,
+.tg-link:focus-visible::after,
+.tg-link:active::after {
   transform: scaleX(1);
   transform-origin: left;
 }

@@ -19,7 +19,7 @@ export function SectionTitle({
     >
       {eyebrow && (
         <span
-          className={`inline-flex items-center gap-2 font-display uppercase tracking-[0.32em] text-xs ${isBlack ? "text-tg-rust" : "text-tg-orange"}`}
+          className={`inline-flex items-center gap-2 font-display uppercase tracking-[0.32em] text-sm ${isBlack ? "text-tg-rust" : "text-tg-orange"}`}
         >
           <span className="block h-[1px] w-8 bg-current opacity-70" />
           {eyebrow}

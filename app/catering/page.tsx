@@ -190,7 +190,7 @@ export default function CateringPage() {
             {eventTypes.map((event, i) => (
               <Reveal key={event.title} delay={0.08 * i}>
                 <div className="flex flex-col gap-4 rounded-2xl bg-white border border-tg-black/8 p-8 md:p-10 h-full">
-                  <span className="font-display uppercase tracking-[0.3em] text-[11px] text-tg-orange/80">
+                  <span className="font-display uppercase tracking-[0.3em] text-xs text-tg-orange/80">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="font-display uppercase tracking-tight text-2xl md:text-3xl text-tg-black">
