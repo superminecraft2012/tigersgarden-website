@@ -4,21 +4,23 @@
   --color-tg-black: #0e0d0c;
   --color-tg-charcoal: #1a1816;
   --color-tg-ash: #2a2724;
-  --color-tg-orange: #f25a1c;
-  --color-tg-orange-deep: #c43e0a;
-  --color-tg-ember: #ff7a32;
+  --color-tg-orange: #E67E22;
+  --color-tg-orange-deep: #C0392B;
+  --color-tg-ember: #F09A33;
   --color-tg-cream: #f4e9d6;
   --color-tg-cream-soft: #faf3e4;
-  --color-tg-amber: #e8951a;
-  --color-tg-lime: #d4e400;
-  --color-tg-gold: #e8b14a;
+  --color-tg-amber: #D4AF37;
+  --color-tg-lime: #C0392B;
+  --color-tg-gold: #D4AF37;
   --color-tg-rust: #8a3210;
+  --color-tg-lotus: #2C3E50;
+  --color-tg-green: #2ECC71;
 
   --font-display: var(--font-anton);
   --font-serif: var(--font-italiana);
   --font-sans: var(--font-inter);
 
-  --shadow-glow: 0 0 60px -10px rgba(242, 90, 28, 0.55);
+  --shadow-glow: 0 0 60px -10px rgba(230, 126, 34, 0.55);
   --shadow-card: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
 
   --ease-fierce: cubic-bezier(0.16, 1, 0.3, 1);
@@ -33,9 +35,9 @@
   }
 
   @keyframes flicker {
-    0%, 100% { opacity: 1; filter: drop-shadow(0 0 12px rgba(242, 90, 28, 0.6)); }
-    45% { opacity: 0.92; filter: drop-shadow(0 0 6px rgba(242, 90, 28, 0.3)); }
-    55% { opacity: 1; filter: drop-shadow(0 0 18px rgba(242, 90, 28, 0.8)); }
+    0%, 100% { opacity: 1; filter: drop-shadow(0 0 12px rgba(230, 126, 34, 0.6)); }
+    45% { opacity: 0.92; filter: drop-shadow(0 0 6px rgba(230, 126, 34, 0.3)); }
+    55% { opacity: 1; filter: drop-shadow(0 0 18px rgba(230, 126, 34, 0.8)); }
   }
 
   @keyframes fade-up {

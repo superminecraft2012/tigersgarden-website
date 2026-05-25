@@ -44,11 +44,11 @@ export default function AboutPage() {
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-tg-black/85 via-tg-black/60 to-tg-black/30"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-tg-lotus/45 via-tg-lotus/15 to-transparent"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-tg-black/40 via-transparent to-tg-black/70"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-tg-lotus/30"
         />
 
         <Container className="relative z-10 flex min-h-[75vh] flex-col justify-center py-16 sm:py-24 md:py-36">
@@ -74,7 +74,7 @@ export default function AboutPage() {
                   className="absolute -inset-6 -z-10 rounded-2xl opacity-50 blur-3xl"
                   style={{
                     background:
-                      "radial-gradient(closest-side, rgba(242,90,28,0.45), transparent 70%)",
+                      "radial-gradient(closest-side, rgba(230,126,34,0.45), transparent 70%)",
                   }}
                   aria-hidden
                 />
@@ -98,7 +98,7 @@ export default function AboutPage() {
       </section>
 
       {/* ---------- 2. VALUES ---------- */}
-      <section className="relative bg-tg-charcoal py-24 md:py-32">
+      <section className="relative bg-tg-orange-deep py-24 md:py-32">
         <Container>
           <Reveal>
             <SectionTitle
@@ -220,7 +220,7 @@ export default function AboutPage() {
       </section>
 
       {/* ---------- 5. EXTRAS ---------- */}
-      <section className="relative bg-tg-charcoal py-24 md:py-32">
+      <section className="relative bg-tg-orange-deep py-24 md:py-32">
         <Container>
           <Reveal>
             <SectionTitle eyebrow="Beyond the dining room" tone="cream">
@@ -321,7 +321,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute inset-0 opacity-30"
           style={{
             background:
-              "radial-gradient(60% 80% at 50% 100%, rgba(242,90,28,0.35), transparent 70%)",
+              "radial-gradient(60% 80% at 50% 100%, rgba(230,126,34,0.35), transparent 70%)",
           }}
           aria-hidden
         />

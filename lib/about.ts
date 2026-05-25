@@ -1,7 +1,7 @@
 export const aboutHero = {
-  eyebrow: "Welcome",
-  title: "A family kitchen, in the heart of downtown.",
-  body: "Tiger's Garden is a family-owned and operated Thai and Laotian restaurant in the heart of downtown Vancouver, WA, facing Esther Short Park. When you stop in, you get the best of two cuisines we grew up cooking, and you support a small, local business while you're at it.",
+  eyebrow: "Since day one.",
+  title: "Same kitchen. New flavors.",
+  body: "Tiger's Garden has been part of downtown Vancouver for years. We've always cooked Thai and Laotian food on this corner — and now we're doing it better than ever. Same family recipes, sharper technique, and a menu full of flavors we're proud to put in front of you.",
   image: "/images/sections/about-us.webp",
   imageCaption: "312 W 8th St, facing Esther Short Park",
 };
@@ -9,7 +9,7 @@ export const aboutHero = {
 export const aboutValues = [
   {
     title: "Cooked the way we were taught.",
-    body: "Our recipes come out of the family, not a binder. Curries are pounded from paste, broths are simmered the long way, and the herbs are fresh because there isn't a shortcut that tastes the same.",
+    body: "Our recipes come from the family, and they've only gotten better with time. Curries still pounded from paste, broths still simmered the long way — just with more years of practice behind them.",
   },
   {
     title: "Two cuisines, one table.",
@@ -21,7 +21,7 @@ export const aboutValues = [
   },
   {
     title: "Local first.",
-    body: "Downtown Vancouver is our neighborhood. We've fed people here through openings, weekday lunches, dates, and the after-work crowd from Esther Short Park. We hope to keep doing it for a long time.",
+    body: "Downtown Vancouver has been our neighborhood for a long time. We've fed people here through weekday lunches, date nights, and the after-work crowd from Esther Short Park — and the food keeps getting better.",
   },
 ];
 

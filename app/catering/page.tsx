@@ -64,7 +64,7 @@ export default function CateringPage() {
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-tg-black/55 via-tg-black/45 to-tg-black/80"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-tg-lotus/20 via-tg-lotus/10 to-tg-lotus/45"
         />
 
         <Container className="relative z-10">
@@ -127,10 +127,9 @@ export default function CateringPage() {
                 </span>
               </SectionTitle>
               <p className="text-base md:text-lg leading-relaxed text-tg-black/70 max-w-lg">
-                Tiger&rsquo;s Garden has been feeding Vancouver for years, and we
-                bring the same care to catering that we bring to every plate in
-                the dining room. Whether it&rsquo;s twelve people or a hundred,
-                Thai and Laotian food travels beautifully and makes an
+                Tiger&rsquo;s Garden has been feeding Vancouver for years,
+                and the menu has never been stronger. Whether it&rsquo;s twelve people or a
+                hundred, Thai and Laotian food travels well and makes an
                 impression.
               </p>
               <p className="text-base leading-relaxed text-tg-black/60 max-w-lg">
@@ -205,7 +204,7 @@ export default function CateringPage() {
       </section>
 
       {/* 4. HOW IT WORKS */}
-      <section className="bg-tg-amber py-24 md:py-32">
+      <section className="bg-tg-orange-deep py-24 md:py-32">
         <Container>
           <Reveal>
             <div className="flex flex-col items-center text-center gap-3 mb-16">
@@ -251,7 +250,7 @@ export default function CateringPage() {
               <p className="max-w-xl text-tg-cream/70 leading-relaxed">
                 Call us to get started. We&rsquo;ll talk through the date,
                 headcount, and any dietary needs, then put together something
-                the room will remember.
+                a menu worth showing up for.
               </p>
             </Reveal>
             <Reveal delay={0.3}>

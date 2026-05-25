@@ -16,7 +16,7 @@ import { aboutHero, aboutCuisine } from "@/lib/about";
 const features = [
   {
     label: "Family Recipes",
-    desc: "Dishes passed down and still evolving, cooked the way we grew up.",
+    desc: "The dishes this place was built on, cooked the same way they've always been — and getting better every year.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14" />
@@ -24,8 +24,8 @@ const features = [
     ),
   },
   {
-    label: "Always Fresh",
-    desc: "Ingredients prepped every morning. Nothing frozen, nothing cut corners.",
+    label: "Made Fresh",
+    desc: "Prepped in-house every morning. Better ingredients, better flavors, no shortcuts.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
         <path d="M12 3c-1.2 5.4-5.3 8.1-8 9 2 5.7 6.4 8 8 9 1.6-1 6-3.3 8-9-2.7-.9-6.8-3.6-8-9z" />
@@ -78,11 +78,11 @@ export default function HomePage() {
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-tg-black via-tg-black/85 to-tg-black/30"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-r from-tg-lotus/35 via-tg-lotus/10 to-transparent"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-tg-black/30 via-transparent to-tg-black/80"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-tg-lotus/25"
         />
 
         <Container className="relative z-10">
@@ -92,7 +92,7 @@ export default function HomePage() {
               style={{ animationDelay: "0.05s" }}
             >
               <span className="block h-[1px] w-10 bg-current opacity-70" />
-              Family-owned · Downtown Vancouver, WA
+              Been here a while · Downtown Vancouver, WA
               <span className="block h-[1px] w-10 bg-current opacity-70" />
             </span>
 
@@ -140,8 +140,8 @@ export default function HomePage() {
           "Cocktail Lounge",
           "Catering",
           "Downtown Vancouver",
+          "New Flavors, Same Roots",
           "Walk-ins Welcome",
-          "Open daily",
         ]}
       />
 
@@ -159,16 +159,16 @@ export default function HomePage() {
                   </span>
                 </SectionTitle>
                 <p className="mt-6 max-w-lg text-base md:text-lg leading-relaxed text-tg-black/70">
-                  A family-owned Thai &amp; Laotian restaurant in the heart of
-                  downtown Vancouver, WA, right across from Esther Short Park.
-                  We cook the dishes we grew up making, and we&rsquo;re glad you
-                  found us.
+                  Tiger&rsquo;s Garden has been part of downtown Vancouver
+                  for years — and the food has never been better than it is
+                  right now. Same family recipes, new flavors on the menu,
+                  and a kitchen that keeps getting sharper.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-x-6 gap-y-8">
                 {features.map((f) => (
                   <div key={f.label} className="flex flex-col gap-3">
-                    <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-tg-lime text-tg-black">
+                    <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-tg-lime text-tg-cream">
                       {f.icon}
                     </div>
                     <div>
@@ -207,7 +207,7 @@ export default function HomePage() {
       </section>
 
       {/* ============ 4. SIGNATURE CAROUSEL ============ */}
-      <section className="bg-tg-amber py-20 md:py-28 overflow-hidden">
+      <section className="bg-tg-orange-deep py-20 md:py-28 overflow-hidden">
         <Container>
           <Reveal>
             <div className="flex flex-col items-center text-center gap-3 mb-12">
@@ -242,7 +242,7 @@ export default function HomePage() {
             <SectionTitle eyebrow="Try one of our favorites" align="center" tone="black">
               Three plates <br />
               <span className="font-serif italic normal-case tracking-normal text-tg-orange">
-                we&rsquo;re known for.
+                you need to try.
               </span>
             </SectionTitle>
           </Reveal>
@@ -279,8 +279,7 @@ export default function HomePage() {
                 {aboutHero.body}
               </p>
               <p className="font-serif italic text-tg-rust text-xl md:text-2xl">
-                &ldquo;Reservations recommended for parties larger than
-                five.&rdquo;
+                Same roots. New flavors. Better than ever.
               </p>
               <div className="pt-2">
                 <Button
@@ -328,9 +327,9 @@ export default function HomePage() {
 
           <Reveal delay={0.1}>
             <p className="mx-auto mt-8 max-w-2xl text-center text-base md:text-lg text-tg-black/65 leading-relaxed">
-              We grew up cooking both, so we plate both. Thai standards built on
-              fresh chili, kaffir lime, and basil, alongside the Laotian
-              classics we learned at home: sharp, citrusy, herb-led.
+              We grew up cooking both, and we&rsquo;ve been perfecting
+              them ever since. Thai built on fresh chili, kaffir lime, and
+              basil. Laotian the way it should be: sharp, citrusy, herb-led.
             </p>
           </Reveal>
 
@@ -376,7 +375,7 @@ export default function HomePage() {
       <Reviews />
 
       {/* ============ 9. VISIT ============ */}
-      <section className="bg-tg-amber py-24 md:py-32">
+      <section className="bg-tg-orange-deep py-24 md:py-32">
         <Container>
           <Reveal>
             <div className="flex flex-col items-center text-center gap-3 mb-16">
@@ -470,7 +469,7 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 -z-10 opacity-50"
           style={{
             background:
-              "radial-gradient(60% 60% at 50% 100%, rgba(242,90,28,0.25) 0%, rgba(14,13,12,0) 70%)",
+              "radial-gradient(60% 60% at 50% 100%, rgba(230,126,34,0.25) 0%, rgba(14,13,12,0) 70%)",
           }}
         />
         <Container className="py-24 md:py-32">
@@ -492,8 +491,8 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="max-w-xl text-tg-cream/75 leading-relaxed">
-                Order online for pickup or delivery, or give us a call, we
-                save tables for walk-ins, too.
+                Order online for pickup or delivery, or call ahead — we
+                keep tables open for walk-ins too.
               </p>
             </Reveal>
             <Reveal delay={0.3}>

@@ -176,7 +176,7 @@ export default async function MenuItemPage({
 
       {/* 3. PAIRS WITH */}
       {related.length > 0 && (
-        <section className="bg-tg-charcoal py-20 md:py-28">
+        <section className="bg-tg-orange-deep py-20 md:py-28">
           <Container>
             <div className="mb-12 md:mb-16 max-w-3xl">
               <Reveal>

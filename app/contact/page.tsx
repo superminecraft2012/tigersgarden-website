@@ -72,7 +72,7 @@ export default function ContactPage() {
           className="pointer-events-none absolute left-1/3 top-1/2 -z-10 h-[55vh] w-[55vh] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-50 blur-3xl"
           style={{
             background:
-              "radial-gradient(circle, rgba(242,90,28,0.28) 0%, rgba(242,90,28,0) 65%)",
+              "radial-gradient(circle, rgba(230,126,34,0.28) 0%, rgba(230,126,34,0) 65%)",
           }}
         />
         <Container className="relative z-10">
@@ -117,7 +117,7 @@ export default function ContactPage() {
       </section>
 
       {/* ============ 2. VISIT CARD ============ */}
-      <section className="bg-tg-charcoal py-20 md:py-28">
+      <section className="bg-tg-orange-deep py-20 md:py-28">
         <Container>
           <Reveal>
             <article className="mx-auto w-full max-w-5xl rounded-lg border border-tg-cream/10 bg-tg-black/40 p-8 md:p-12 shadow-[var(--shadow-card)]">
@@ -251,7 +251,7 @@ export default function ContactPage() {
           className="pointer-events-none absolute inset-0 -z-10 opacity-50"
           style={{
             background:
-              "radial-gradient(60% 60% at 50% 100%, rgba(242,90,28,0.22) 0%, rgba(14,13,12,0) 70%)",
+              "radial-gradient(60% 60% at 50% 100%, rgba(230,126,34,0.22) 0%, rgba(14,13,12,0) 70%)",
           }}
         />
         <Container className="py-20 md:py-28">

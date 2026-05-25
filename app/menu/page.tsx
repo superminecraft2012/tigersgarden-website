@@ -29,7 +29,7 @@ export default function MenuPage() {
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-tg-black/50 via-tg-black/40 to-tg-black/75"
+          className="pointer-events-none absolute inset-0 bg-gradient-to-b from-tg-lotus/20 via-tg-lotus/10 to-tg-lotus/40"
         />
 
         <Container className="relative z-10">
