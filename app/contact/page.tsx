@@ -11,13 +11,13 @@ import { primary, site, cuisineTags } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Visit Us",
   description:
-    "Tiger's Garden, Thai & Laotian cuisine at 312 W 8th St, Vancouver, WA. Walk-ins welcome, reservations recommended for parties of five or more.",
+    "Tiger's Garden, Thai & Laotian cuisine at 312 W 8th St, Vancouver, WA. Walk-ins welcome, reservations recommended for parties larger than five.",
 };
 
 const faqs = [
   {
     q: "Do you take reservations?",
-    a: "We do, especially for parties of five or more. Call (360) 693-9585 to book.",
+    a: "We do, especially for parties larger than five. Call (360) 693-9585 to book.",
   },
   {
     q: "Walk-ins?",
@@ -89,7 +89,7 @@ export default function ContactPage() {
               <Reveal delay={0.15}>
                 <p className="text-lg md:text-xl leading-relaxed text-tg-cream/80 max-w-xl">
                   Walk-ins welcome. Reservations recommended for parties of
-                  five or more. The cocktail lounge is open the same hours as
+                  larger than five. The cocktail lounge is open the same hours as
                   the dining room.
                 </p>
               </Reveal>

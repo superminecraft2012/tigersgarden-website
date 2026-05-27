@@ -17,7 +17,7 @@ export const aboutValues = [
   },
   {
     title: "Cozy, on purpose.",
-    body: "There's a dining room and there's a cocktail lounge, both calm enough to talk in. Walk-ins welcome. Reservations recommended for parties of five or more.",
+    body: "There's a dining room and there's a cocktail lounge, both calm enough to talk in. Walk-ins welcome. Reservations recommended for parties larger than five.",
   },
   {
     title: "Local first.",

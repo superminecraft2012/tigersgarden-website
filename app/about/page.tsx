@@ -61,7 +61,7 @@ export default function AboutPage() {
                 {aboutHero.body}
               </p>
               <p className="mt-6 font-serif italic text-base text-tg-cream/60">
-                Reservations recommended for parties of five or more.
+                Reservations recommended for parties larger than five.
               </p>
             </div>
 

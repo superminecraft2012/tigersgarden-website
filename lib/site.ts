@@ -5,8 +5,8 @@ export const site = {
   tagline: "Cozy restaurant & cocktail lounge serving Thai & Laotian dishes",
   description:
     "Tiger's Garden is a family-owned Thai & Laotian restaurant and cocktail lounge in the heart of downtown Vancouver, WA, facing Esther Short Park.",
-  url: "https://www.tigersgardencuisine.com",
-  orderUrl: "https://www.tigersgardencuisine.com/order",
+  url: "https://www.tigersgardenthai.com",
+  orderUrl: "https://order.tigersgardenthai.com",
   reservationsUrl: "tel:+13606939585",
   cateringUrl: "/catering",
   galleryUrl: "/gallery",

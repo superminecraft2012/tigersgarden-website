@@ -84,7 +84,7 @@ export const menu: MenuItem[] = [
     category: "Appetizers",
     short: "Crab and cream cheese in a crisp wonton shell.",
     description:
-      "Crab meat and cream cheese folded into wonton skins, fried until golden. Served with sweet-and-sour sauce.",
+      "Crab meat and cream cheese folded into wonton skins, fried until golden. Served with sweet chili sauce.",
     image: "/images/menu/appetizers/a3-fried-crab-wontons.png",
     spice: 0,
     hue: ["#f4b042", "#5a2d08"],
@@ -106,7 +106,7 @@ export const menu: MenuItem[] = [
     category: "Appetizers",
     short: "Battered shrimp with toasted coconut crust.",
     description:
-      "Plump shrimp coated in a toasted-coconut batter and fried golden. Served with a sweet plum sauce for dipping.",
+      "Plump shrimp coated in a toasted-coconut batter and fried golden. Served with sweet and sour sauce.",
     image: "/images/menu/appetizers/a5-coconut-shrimps.png",
     spice: 0,
     hue: ["#f4e9d6", "#8a5a10"],
@@ -115,9 +115,9 @@ export const menu: MenuItem[] = [
     slug: "avocado-rolls",
     name: "Avocado Rolls",
     category: "Appetizers",
-    short: "Avocado, asparagus, carrot, sweet chili.",
+    short: "Fresh avocado, lettuce, bean sprouts, cilantro, carrot, rice noodles in rice paper, peanut sauce.",
     description:
-      "Crispy rolls filled with creamy avocado, asparagus, and carrot. Served with sweet-chili dipping sauce.",
+      "Fresh slices of avocado, lettuce, bean sprouts, cilantro, carrot, and rice noodles wrapped in clear rice paper. Served with peanut sauce.",
     image: "/images/menu/appetizers/a6-avocado-rolls.png",
     spice: 0,
     vegetarianAvailable: true,
@@ -262,9 +262,9 @@ export const menu: MenuItem[] = [
     slug: "tiger-house-salad",
     name: "Tiger House Salad",
     category: "Salads",
-    short: "Mixed greens, peanut dressing.",
+    short: "Mixed greens, tofu, crispy wontons, peanut sauce.",
     description:
-      "Crisp mixed greens, carrot, cucumber, and tomato with our house peanut dressing.",
+      "Crisp mixed greens, onion, cucumber, tomato, and tofu topped with crispy wontons and peanut sauce.",
     image: "/images/menu/salads/d32-tiger-house-salad.png",
     spice: 0,
     vegetarianAvailable: true,
