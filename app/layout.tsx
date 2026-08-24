@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Anton, Inter, Italiana } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -68,6 +69,11 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <HolidayToast />
+        <Script
+          strategy="afterInteractive"
+          data-site="tigers-garden"
+          src="https://analytics.dineably.com/public/tracker.js?site=tigers-garden"
+        />
       </body>
     </html>
   );

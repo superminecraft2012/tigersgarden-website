@@ -121,7 +121,7 @@ export function HolidayToast() {
               {/* CTAs */}
               <div className="mt-6 flex flex-col gap-2.5">
                 <a
-                  href={site.orderUrl}
+                  href={site.orderUrl} data-track="order_click"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex h-11 w-full items-center justify-center rounded-full bg-tg-orange font-display text-[0.68rem] uppercase tracking-[0.2em] text-tg-black transition-all duration-300 ease-[var(--ease-fierce)] hover:bg-tg-ember hover:shadow-[var(--shadow-glow)] active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-tg-orange focus-visible:ring-offset-2 focus-visible:ring-offset-tg-charcoal"

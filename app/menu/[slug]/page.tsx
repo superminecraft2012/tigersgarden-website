@@ -66,7 +66,7 @@ export default async function MenuItemPage({
                 }}
               >
                 <Link
-                  href="/menu"
+                  href="/menu" data-track="menu_click"
                   className="absolute top-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-tg-black/70 backdrop-blur-md px-4 py-2 font-display uppercase tracking-[0.25em] text-[10px] text-tg-cream hover:text-tg-orange transition-colors"
                 >
                   <span aria-hidden>&larr;</span> Back to menu
@@ -89,7 +89,7 @@ export default async function MenuItemPage({
                   aria-label="Breadcrumb"
                   className="font-display uppercase tracking-[0.3em] text-xs text-tg-cream/60"
                 >
-                  <Link href="/menu" className="tg-link hover:text-tg-cream">
+                  <Link href="/menu" data-track="menu_click" className="tg-link hover:text-tg-cream">
                     Menu
                   </Link>
                   <span aria-hidden className="mx-2">
@@ -143,10 +143,10 @@ export default async function MenuItemPage({
 
               <Reveal delay={0.5}>
                 <div className="mt-10 flex flex-wrap items-center gap-4">
-                  <Button href={site.orderUrl} target="_blank" variant="primary">
+                  <Button href={site.orderUrl} data-track="order_click" target="_blank" variant="primary">
                     Add to order
                   </Button>
-                  <Button href="/menu" variant="outline">
+                  <Button href="/menu" data-track="menu_click" variant="outline">
                     See full menu
                   </Button>
                 </div>
@@ -215,10 +215,10 @@ export default async function MenuItemPage({
             </Reveal>
             <Reveal delay={0.3}>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <Button href={site.orderUrl} target="_blank" variant="primary">
+                <Button href={site.orderUrl} data-track="order_click" target="_blank" variant="primary">
                   Order online
                 </Button>
-                <Button href="/menu" variant="outline">
+                <Button href="/menu" data-track="menu_click" variant="outline">
                   Back to menu
                 </Button>
               </div>

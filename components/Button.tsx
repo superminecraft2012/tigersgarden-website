@@ -35,7 +35,15 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
   const cls = `${base} ${variants[variant]} ${className}`;
 
   if ("href" in props && props.href) {
-    const { href, target, rel, children } = props;
+    const {
+      href,
+      target,
+      rel,
+      children,
+      variant: _variant,
+      className: _className,
+      ...rest
+    } = props;
     const isExternal =
       target === "_blank" || /^(https?:|tel:|mailto:)/.test(href);
     if (isExternal) {
@@ -45,13 +53,14 @@ export function Button(props: ButtonAsButton | ButtonAsLink) {
           target={target}
           rel={rel ?? (target === "_blank" ? "noopener noreferrer" : undefined)}
           className={cls}
+          {...rest}
         >
           {children}
         </a>
       );
     }
     return (
-      <Link href={href} className={cls}>
+      <Link href={href} className={cls} {...rest}>
         {children}
       </Link>
     );

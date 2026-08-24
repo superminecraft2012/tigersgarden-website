@@ -54,10 +54,10 @@ export default function MenuPage() {
               className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4 opacity-0 [animation:var(--animate-fade-up)]"
               style={{ animationDelay: "0.3s" }}
             >
-              <Button href={site.orderUrl} target="_blank" variant="primary">
+              <Button href={site.orderUrl} data-track="order_click" target="_blank" variant="primary">
                 Order Online
               </Button>
-              <Button href={primary.phoneHref} variant="outline">
+              <Button href={primary.phoneHref} data-track="call_click" variant="outline">
                 Call {primary.phone}
               </Button>
             </div>
@@ -108,7 +108,7 @@ export default function MenuPage() {
                 >
                   Catering
                 </Button>
-                <Button href={primary.phoneHref} variant="primary">
+                <Button href={primary.phoneHref} data-track="call_click" variant="primary">
                   Call {primary.phone}
                 </Button>
               </div>
@@ -135,10 +135,10 @@ export default function MenuPage() {
             </Reveal>
             <Reveal delay={0.3}>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <Button href={site.orderUrl} target="_blank" variant="primary">
+                <Button href={site.orderUrl} data-track="order_click" target="_blank" variant="primary">
                   Start your order
                 </Button>
-                <Button href={primary.phoneHref} variant="outline">
+                <Button href={primary.phoneHref} data-track="call_click" variant="outline">
                   Reserve by phone
                 </Button>
               </div>

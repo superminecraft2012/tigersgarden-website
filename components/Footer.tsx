@@ -58,7 +58,7 @@ export function Footer() {
               {primary.neighborhood}
             </p>
             <a
-              href={primary.phoneHref}
+              href={primary.phoneHref} data-track="call_click"
               className="tg-link block mt-4 text-tg-cream/80 text-sm"
             >
               {primary.phone}
@@ -98,6 +98,7 @@ export function Footer() {
                 <li key={n.href}>
                   <Link
                     href={n.href}
+                    data-track={n.href === "/menu" ? "menu_click" : undefined}
                     className="tg-link text-tg-cream/80 hover:text-tg-cream text-sm"
                   >
                     {n.label}
@@ -106,7 +107,7 @@ export function Footer() {
               ))}
               <li>
                 <a
-                  href={navCta.href}
+                  href={navCta.href} data-track="order_click"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="tg-link text-tg-orange hover:text-tg-ember text-sm font-display uppercase tracking-[0.15em]"

@@ -34,6 +34,7 @@ export function MenuBrowser({ categories, categoryTaglines, items }: Props) {
               <li key={c} className="shrink-0">
                 <button
                   onClick={() => setActive(c)}
+                  data-track="menu_click"
                   className={`relative px-4 py-3 font-display uppercase tracking-[0.18em] text-xs whitespace-nowrap transition-colors duration-200 rounded-full touch-manipulation ${
                     active === c
                       ? "bg-tg-orange text-white"

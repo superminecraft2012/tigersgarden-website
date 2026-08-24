@@ -140,7 +140,7 @@ export default function ContactPage() {
                     Get directions
                   </Button>
                   <Button
-                    href={site.orderUrl}
+                    href={site.orderUrl} data-track="order_click"
                     variant="primary"
                     target="_blank"
                   >
@@ -164,7 +164,7 @@ export default function ContactPage() {
                     Phone
                   </span>
                   <a
-                    href={primary.phoneHref}
+                    href={primary.phoneHref} data-track="call_click"
                     className="tg-link inline-flex w-fit text-2xl md:text-3xl font-display uppercase tracking-[-0.01em] text-tg-cream"
                   >
                     {primary.phone}
@@ -273,10 +273,10 @@ export default function ContactPage() {
             </Reveal>
             <Reveal delay={0.2}>
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
-                <Button href={site.orderUrl} variant="primary" target="_blank">
+                <Button href={site.orderUrl} data-track="order_click" variant="primary" target="_blank">
                   Start your order
                 </Button>
-                <Button href={primary.phoneHref} variant="outline">
+                <Button href={primary.phoneHref} data-track="call_click" variant="outline">
                   Call {primary.phone}
                 </Button>
               </div>

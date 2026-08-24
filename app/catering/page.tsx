@@ -97,10 +97,10 @@ export default function CateringPage() {
               className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4 opacity-0 [animation:var(--animate-fade-up)]"
               style={{ animationDelay: "0.35s" }}
             >
-              <Button href={primary.phoneHref} variant="primary">
+              <Button href={primary.phoneHref} data-track="call_click" variant="primary">
                 Call to Book
               </Button>
-              <Button href="/menu" variant="outline">
+              <Button href="/menu" data-track="menu_click" variant="outline">
                 Browse the Menu
               </Button>
             </div>
@@ -138,7 +138,7 @@ export default function CateringPage() {
                 from there.
               </p>
               <div className="pt-2">
-                <Button href={primary.phoneHref} variant="primary">
+                <Button href={primary.phoneHref} data-track="call_click" variant="primary">
                   Call {primary.phone}
                 </Button>
               </div>
@@ -255,10 +255,10 @@ export default function CateringPage() {
             </Reveal>
             <Reveal delay={0.3}>
               <div className="flex flex-wrap items-center justify-center gap-4">
-                <Button href={primary.phoneHref} variant="primary">
+                <Button href={primary.phoneHref} data-track="call_click" variant="primary">
                   Call {primary.phone}
                 </Button>
-                <Button href="/menu" variant="outline">
+                <Button href="/menu" data-track="menu_click" variant="outline">
                   Browse the Menu
                 </Button>
               </div>

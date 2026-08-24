@@ -114,10 +114,10 @@ export default function HomePage() {
               className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4 opacity-0 [animation:var(--animate-fade-up)]"
               style={{ animationDelay: "0.4s" }}
             >
-              <Button href={site.orderUrl} variant="primary" target="_blank">
+              <Button href={site.orderUrl} data-track="order_click" variant="primary" target="_blank">
                 Order Online
               </Button>
-              <Button href="/menu" variant="outline">
+              <Button href="/menu" data-track="menu_click" variant="outline">
                 See the Menu
               </Button>
             </div>
@@ -226,7 +226,7 @@ export default function HomePage() {
 
         <div className="mt-12 flex justify-center">
           <Button
-            href="/menu"
+            href="/menu" data-track="menu_click"
             variant="outline"
             className="!border-white/60 !text-white hover:!border-white hover:!bg-white/10"
           >
@@ -257,7 +257,7 @@ export default function HomePage() {
 
           <Reveal delay={0.2} className="mt-14 flex justify-center">
             <Button
-              href="/menu"
+              href="/menu" data-track="menu_click"
               variant="outline"
               className="!border-tg-black/30 !text-tg-black hover:!border-tg-orange hover:!text-tg-orange"
             >
@@ -409,7 +409,7 @@ export default function HomePage() {
                   </span>
                 </div>
                 <a
-                  href={primary.phoneHref}
+                  href={primary.phoneHref} data-track="call_click"
                   className="tg-link mt-2 inline-flex w-fit font-display uppercase tracking-[0.25em] text-sm text-white"
                 >
                   {primary.phone}
@@ -497,10 +497,10 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.3}>
               <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
-                <Button href={site.orderUrl} variant="primary" target="_blank">
+                <Button href={site.orderUrl} data-track="order_click" variant="primary" target="_blank">
                   Start your order
                 </Button>
-                <Button href={primary.phoneHref} variant="outline">
+                <Button href={primary.phoneHref} data-track="call_click" variant="outline">
                   Call {primary.phone}
                 </Button>
               </div>

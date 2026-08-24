@@ -175,7 +175,7 @@ export default function AboutPage() {
                       {dishes.map((dish) => (
                         <li key={dish.slug}>
                           <Link
-                            href={`/menu/${dish.slug}`}
+                            href={`/menu/${dish.slug}`} data-track="menu_click"
                             className="tg-link font-display uppercase tracking-[0.08em] text-lg md:text-xl text-tg-black hover:text-tg-orange-deep"
                           >
                             {dish.name}
@@ -246,7 +246,7 @@ export default function AboutPage() {
                   </p>
                   {isGift && (
                     <a
-                      href={primary.phoneHref}
+                      href={primary.phoneHref} data-track="call_click"
                       className="tg-link mt-1 inline-flex w-fit font-display uppercase tracking-[0.18em] text-sm text-tg-orange"
                     >
                       {primary.phone}
@@ -279,7 +279,7 @@ export default function AboutPage() {
                   {primary.address}, {primary.region}
                 </p>
                 <a
-                  href={primary.phoneHref}
+                  href={primary.phoneHref} data-track="call_click"
                   className="tg-link font-display uppercase tracking-[0.18em] text-sm text-tg-orange"
                 >
                   {primary.phone}
@@ -287,7 +287,7 @@ export default function AboutPage() {
               </div>
               <div className="mt-4 flex flex-wrap items-center justify-center gap-4">
                 <Button
-                  href={site.orderUrl}
+                  href={site.orderUrl} data-track="order_click"
                   variant="primary"
                   target="_blank"
                 >
@@ -335,13 +335,13 @@ export default function AboutPage() {
             <Reveal delay={0.2}>
               <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
                 <Button
-                  href={site.orderUrl}
+                  href={site.orderUrl} data-track="order_click"
                   variant="primary"
                   target="_blank"
                 >
                   Start your order
                 </Button>
-                <Button href={primary.phoneHref} variant="outline">
+                <Button href={primary.phoneHref} data-track="call_click" variant="outline">
                   Call {primary.phone}
                 </Button>
               </div>

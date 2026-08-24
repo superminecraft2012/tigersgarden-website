@@ -87,7 +87,7 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
                     </div>
 
                     <Link
-                      href={site.orderUrl}
+                      href={site.orderUrl} data-track="order_click"
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}

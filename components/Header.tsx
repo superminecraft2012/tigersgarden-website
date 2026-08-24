@@ -58,6 +58,7 @@ export function Header() {
               <Link
                 key={n.href}
                 href={n.href}
+                data-track={n.href === "/menu" ? "menu_click" : undefined}
                 className={`relative font-display uppercase tracking-[0.2em] text-sm transition-colors ${
                   isActive
                     ? "text-tg-orange"
@@ -75,7 +76,7 @@ export function Header() {
 
         <div className="hidden md:block">
           <Button
-            href={navCta.href}
+            href={navCta.href} data-track="order_click"
             variant="primary"
             target="_blank"
             rel="noopener noreferrer"
@@ -114,6 +115,7 @@ export function Header() {
               <Link
                 key={n.href}
                 href={n.href}
+                data-track={n.href === "/menu" ? "menu_click" : undefined}
                 onClick={() => setOpen(false)}
                 className={`font-display uppercase tracking-[0.2em] text-xl ${
                   isActive ? "text-tg-orange" : "text-tg-cream"
@@ -124,7 +126,7 @@ export function Header() {
             );
           })}
           <Button
-            href={navCta.href}
+            href={navCta.href} data-track="order_click"
             variant="primary"
             target="_blank"
             rel="noopener noreferrer"

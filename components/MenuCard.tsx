@@ -5,7 +5,7 @@ import { MenuItem } from "@/lib/menu";
 export function MenuCard({ item }: { item: MenuItem }) {
   return (
     <Link
-      href={`/menu/${item.slug}`}
+      href={`/menu/${item.slug}`} data-track="menu_click"
       className="group relative flex flex-col gap-4 outline-none focus-visible:ring-2 focus-visible:ring-tg-orange rounded-lg"
     >
       <div
