@@ -21,6 +21,8 @@ export type MenuItem = {
   vegetarianAvailable?: boolean;
   glutenFreeAvailable?: boolean;
   signature?: boolean;
+  /** Other names for the same dish, shown on the page after a slug rename. */
+  alsoKnownAs?: string[];
   pairings?: string[];
   // Placeholder hue used as fallback art if an image fails to load.
   hue: [string, string];
@@ -79,7 +81,8 @@ export const menu: MenuItem[] = [
     hue: ["#f4e9d6", "#5a3a10"],
   },
   {
-    slug: "fried-crab-wontons",
+    slug: "crab-rangoon",
+    alsoKnownAs: ["Fried Crab Wontons", "crab puffs"],
     name: "Fried Crab Wontons",
     category: "Appetizers",
     short: "Crab and cream cheese in a crisp wonton shell.",
@@ -101,7 +104,7 @@ export const menu: MenuItem[] = [
     hue: ["#e8b14a", "#3a2208"],
   },
   {
-    slug: "coconut-shrimps",
+    slug: "coconut-shrimp",
     name: "Coconut Shrimp",
     category: "Appetizers",
     short: "Battered shrimp with toasted coconut crust.",
@@ -309,7 +312,8 @@ export const menu: MenuItem[] = [
     hue: ["#7ea35a", "#1f3a10"],
   },
   {
-    slug: "sweet-sour",
+    slug: "sweet-and-sour",
+    alsoKnownAs: ["Sweet & Sour"],
     name: "Sweet & Sour",
     category: "Stir-Fries",
     short: "Pineapple, bell pepper, tomato, tangy sauce.",
@@ -332,7 +336,8 @@ export const menu: MenuItem[] = [
     hue: ["#e8b14a", "#5a3208"],
   },
   {
-    slug: "ginger",
+    slug: "ginger-stir-fry",
+    alsoKnownAs: ["Ginger"],
     name: "Ginger",
     category: "Stir-Fries",
     short: "Fresh ginger, mushroom, scallion.",
@@ -343,7 +348,8 @@ export const menu: MenuItem[] = [
     hue: ["#f4e9d6", "#5a3208"],
   },
   {
-    slug: "eggplant",
+    slug: "eggplant-stir-fry",
+    alsoKnownAs: ["Eggplant"],
     name: "Eggplant",
     category: "Stir-Fries",
     short: "Thai eggplant, basil, garlic, sweet chili jam.",
@@ -366,7 +372,8 @@ export const menu: MenuItem[] = [
     hue: ["#7ea35a", "#1f3a10"],
   },
   {
-    slug: "hot-basil",
+    slug: "thai-basil",
+    alsoKnownAs: ["Hot Basil", "pad kra pao"],
     name: "Hot Basil",
     category: "Stir-Fries",
     short: "Holy basil, chili, garlic, bell pepper.",
@@ -483,7 +490,8 @@ export const menu: MenuItem[] = [
     pairings: ["red-curry", "green-curry", "tom-kha-soup"],
   },
   {
-    slug: "pad-see-ewi",
+    slug: "pad-see-ew",
+    alsoKnownAs: ["Pad See Ewi", "pad see eiw"],
     name: "Pad See Ewi",
     category: "Noodle",
     short: "Wide rice noodles, egg, broccoli, cilantro.",
@@ -494,7 +502,8 @@ export const menu: MenuItem[] = [
     hue: ["#5a3a10", "#1f1208"],
   },
   {
-    slug: "pad-khee-mao",
+    slug: "pad-kee-mao",
+    alsoKnownAs: ["Pad Khee Mao", "drunken noodles"],
     name: "Pad Khee Mao",
     category: "Noodle",
     short: "Wide rice noodles, egg, broccoli, bell pepper, basil.",
@@ -552,7 +561,8 @@ export const menu: MenuItem[] = [
     hue: ["#f4b042", "#5a2208"],
   },
   {
-    slug: "hot-basil-fried-rice",
+    slug: "thai-basil-fried-rice",
+    alsoKnownAs: ["Hot Basil Fried Rice"],
     name: "Hot Basil Fried Rice",
     category: "Fried Rice",
     short: "Fried rice with holy basil, chili, garlic.",
@@ -635,7 +645,7 @@ export const menu: MenuItem[] = [
 
   // ===== Beverages =====
   {
-    slug: "thai-ice-coffee",
+    slug: "thai-iced-coffee",
     name: "Thai Iced Coffee",
     category: "Beverages",
     short: "Strong Thai coffee, condensed milk, over ice.",
@@ -645,7 +655,7 @@ export const menu: MenuItem[] = [
     hue: ["#8a5a10", "#2a1208"],
   },
   {
-    slug: "thai-ice-green-tea",
+    slug: "thai-iced-green-tea",
     name: "Thai Iced Green Tea",
     category: "Beverages",
     short: "Sweet jasmine-green tea, condensed milk, ice.",

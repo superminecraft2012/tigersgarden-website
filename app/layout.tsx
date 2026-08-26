@@ -29,7 +29,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name}, ${site.cuisine} in Downtown Vancouver, WA`,
+    default: `Thai & Laotian Restaurant in Vancouver, WA · ${site.name}`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
@@ -53,6 +53,14 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  // Pinch-to-zoom is an accessibility requirement (WCAG 1.4.4 asks for 200%;
+  // this allows 500%). Stated explicitly so it cannot be dropped by accident —
+  // never set userScalable:false or maximumScale:1 here.
+  maximumScale: 5,
+  userScalable: true,
+  // Lets the page fill the screen on notched devices; the safe-area padding in
+  // globals.css keeps content clear of the notch and home indicator.
+  viewportFit: "cover",
   themeColor: "#0e0d0c",
 };
 

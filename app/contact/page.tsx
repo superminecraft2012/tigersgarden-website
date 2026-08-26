@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { canonical, graph, breadcrumbs, restaurantRef } from "@/lib/seo";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -9,6 +11,7 @@ import { GoogleMap } from "@/components/GoogleMap";
 import { primary, site, cuisineTags } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: canonical("/contact") },
   title: "Visit Us",
   description:
     "Tiger's Garden, Thai & Laotian cuisine at 312 W 8th St, Vancouver, WA. Walk-ins welcome, reservations recommended for parties larger than five.",
@@ -63,8 +66,18 @@ function HoursList({
 }
 
 export default function ContactPage() {
+  const data = graph(
+    breadcrumbs([
+      { name: "Home", path: "/" },
+      { name: "Visit", path: "/contact" },
+    ]),
+    restaurantRef,
+  );
+
   return (
     <>
+      <JsonLd data={data} />
+
       {/* ============ 1. HERO ============ */}
       <section className="tg-grain relative isolate overflow-hidden bg-tg-black min-h-[60vh] flex items-center py-20 md:py-28">
         <div
@@ -79,7 +92,7 @@ export default function ContactPage() {
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
             <div className="flex flex-col gap-8">
               <Reveal>
-                <SectionTitle eyebrow="Visit" align="left">
+                <SectionTitle eyebrow="Visit" align="left" as="h1">
                   Come find us in <br />
                   <span className="font-serif italic normal-case tracking-normal text-tg-orange">
                     downtown Vancouver.

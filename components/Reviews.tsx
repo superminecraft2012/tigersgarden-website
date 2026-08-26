@@ -52,7 +52,7 @@ export function Reviews() {
             href={reviewsCta.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="tg-link font-display uppercase tracking-[0.3em] text-xs text-tg-black/60"
+            className="tg-tap tg-link font-display uppercase tracking-[0.3em] text-xs text-tg-black/60"
           >
             {reviewsCta.label}
           </a>

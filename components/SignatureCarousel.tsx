@@ -91,7 +91,7 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className={`self-start mt-4 inline-flex items-center rounded-full px-6 py-2.5 font-display uppercase tracking-[0.15em] text-xs text-white transition-colors duration-200 ${
+                      className={`self-start mt-4 inline-flex min-h-[44px] items-center rounded-full px-6 py-2.5 font-display uppercase tracking-[0.15em] text-xs text-white transition-colors duration-200 ${
                         isActive
                           ? "bg-tg-amber hover:bg-tg-orange"
                           : "bg-tg-amber/50 pointer-events-none"

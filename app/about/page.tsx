@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { canonical, graph, breadcrumbs, restaurantRef } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
@@ -10,7 +12,8 @@ import { GoogleMap } from "@/components/GoogleMap";
 import { site, primary } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Tiger's Garden",
+  alternates: { canonical: canonical("/about") },
   description:
     "Tiger's Garden is a family-owned Thai and Laotian restaurant and cocktail lounge in downtown Vancouver, WA, facing Esther Short Park.",
 };
@@ -30,8 +33,18 @@ const laotianDishes: { name: string; slug: string }[] = [
 ];
 
 export default function AboutPage() {
+  const data = graph(
+    breadcrumbs([
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+    ]),
+    restaurantRef,
+  );
+
   return (
     <>
+      <JsonLd data={data} />
+
       {/* ---------- 1. HERO ---------- */}
       <section className="relative min-h-[75vh] overflow-hidden bg-tg-black tg-grain">
         <Image
@@ -54,7 +67,7 @@ export default function AboutPage() {
         <Container className="relative z-10 flex min-h-[75vh] flex-col justify-center py-16 sm:py-24 md:py-36">
           <div className="grid items-center gap-14 md:grid-cols-12">
             <div className="md:col-span-7 [animation:var(--animate-fade-up)]">
-              <SectionTitle eyebrow={aboutHero.eyebrow} tone="cream">
+              <SectionTitle eyebrow={aboutHero.eyebrow} tone="cream" as="h1">
                 {aboutHero.title}
               </SectionTitle>
               <p className="mt-10 max-w-xl text-lg leading-relaxed text-tg-cream/80">
@@ -247,7 +260,7 @@ export default function AboutPage() {
                   {isGift && (
                     <a
                       href={primary.phoneHref} data-track="call_click"
-                      className="tg-link mt-1 inline-flex w-fit font-display uppercase tracking-[0.18em] text-sm text-tg-orange"
+                      className="tg-link mt-1 tg-tap inline-flex w-fit font-display uppercase tracking-[0.18em] text-sm text-tg-orange"
                     >
                       {primary.phone}
                     </a>

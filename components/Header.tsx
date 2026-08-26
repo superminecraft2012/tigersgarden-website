@@ -59,7 +59,7 @@ export function Header() {
                 key={n.href}
                 href={n.href}
                 data-track={n.href === "/menu" ? "menu_click" : undefined}
-                className={`relative font-display uppercase tracking-[0.2em] text-sm transition-colors ${
+                className={`tg-tap-area relative font-display uppercase tracking-[0.2em] text-sm transition-colors ${
                   isActive
                     ? "text-tg-orange"
                     : "text-tg-cream/85 hover:text-tg-cream"
@@ -117,7 +117,7 @@ export function Header() {
                 href={n.href}
                 data-track={n.href === "/menu" ? "menu_click" : undefined}
                 onClick={() => setOpen(false)}
-                className={`font-display uppercase tracking-[0.2em] text-xl ${
+                className={`flex min-h-[44px] items-center font-display uppercase tracking-[0.2em] text-xl ${
                   isActive ? "text-tg-orange" : "text-tg-cream"
                 }`}
               >

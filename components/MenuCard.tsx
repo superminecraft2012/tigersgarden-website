@@ -45,8 +45,8 @@ export function MenuCard({ item }: { item: MenuItem }) {
         ) : null}
       </div>
       <p className="text-sm text-tg-black/65 leading-relaxed">{item.short}</p>
-      <div className="flex items-center gap-3 text-[13px] sm:text-xs uppercase tracking-[0.2em] text-tg-black/40">
-        <span>{item.category}</span>
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em] text-tg-black/40">
+        <span className="min-w-0 break-words">{item.category}</span>
         {item.vegetarianAvailable && (
           <span className="rounded-full border border-tg-cream/15 px-2 py-0.5 text-[11px] sm:text-[10px]">
             Veg opt.

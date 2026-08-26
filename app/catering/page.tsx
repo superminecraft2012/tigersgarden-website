@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { canonical, graph, breadcrumbs, restaurantRef } from "@/lib/seo";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -8,6 +10,7 @@ import { site, primary } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Catering",
+  alternates: { canonical: canonical("/catering") },
   description:
     "Tiger's Garden caters office lunches, family gatherings, rehearsal dinners, and private events in Vancouver, WA. Call us to plan your menu.",
 };
@@ -50,8 +53,18 @@ const steps = [
 ];
 
 export default function CateringPage() {
+  const data = graph(
+    breadcrumbs([
+      { name: "Home", path: "/" },
+      { name: "Catering", path: "/catering" },
+    ]),
+    restaurantRef,
+  );
+
   return (
     <>
+      <JsonLd data={data} />
+
       {/* 1. HERO */}
       <section className="relative isolate flex min-h-[70vh] items-center justify-center overflow-hidden bg-tg-black">
         <Image

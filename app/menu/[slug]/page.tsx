@@ -9,6 +9,8 @@ import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
 import { menu, getMenuItem, getRelated } from "@/lib/menu";
 import { site } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { canonical, graph, menuItemNode, breadcrumbs, restaurantRef } from "@/lib/seo";
 
 export function generateStaticParams() {
   return menu.map((item) => ({ slug: item.slug }));
@@ -30,6 +32,7 @@ export async function generateMetadata({
   return {
     title: item.name,
     description: item.short,
+    alternates: { canonical: canonical(`/menu/${item.slug}`) },
   };
 }
 
@@ -49,10 +52,21 @@ export default async function MenuItemPage({
   if (!item) notFound();
 
   const related = getRelated(item, 3);
+  const data = graph(
+    menuItemNode(item, `/menu/${item.slug}`),
+    breadcrumbs([
+      { name: "Home", path: "/" },
+      { name: "Menu", path: "/menu" },
+      { name: item.name, path: `/menu/${item.slug}` },
+    ]),
+    restaurantRef,
+  );
   const spice = item.spice && item.spice > 0 ? item.spice : null;
 
   return (
     <>
+      <JsonLd data={data} />
+
       {/* 1. HERO */}
       <section className="bg-tg-black pt-28 pb-20 md:pt-36 md:pb-28">
         <Container>
@@ -67,7 +81,7 @@ export default async function MenuItemPage({
               >
                 <Link
                   href="/menu" data-track="menu_click"
-                  className="absolute top-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-tg-black/70 backdrop-blur-md px-4 py-2 font-display uppercase tracking-[0.25em] text-[10px] text-tg-cream hover:text-tg-orange transition-colors"
+                  className="absolute top-4 left-4 z-10 inline-flex min-h-[44px] items-center gap-2 rounded-full bg-tg-black/70 backdrop-blur-md px-4 py-2 font-display uppercase tracking-[0.25em] text-[10px] text-tg-cream hover:text-tg-orange transition-colors"
                 >
                   <span aria-hidden>&larr;</span> Back to menu
                 </Link>
@@ -170,6 +184,22 @@ export default async function MenuItemPage({
                 {item.description}
               </p>
             </Reveal>
+            {item.alsoKnownAs && item.alsoKnownAs.length > 0 && (
+              <Reveal delay={0.22}>
+                <p className="mt-6 text-tg-cream/55 leading-relaxed">
+                  Also called{" "}
+                  {item.alsoKnownAs.map((n, i) => (
+                    <span key={n}>
+                      {i > 0 &&
+                        (i === item.alsoKnownAs!.length - 1 ? " and " : ", ")}
+                      <span className="text-tg-cream/75">{n}</span>
+                    </span>
+                  ))}
+                  . It is the same dish — {item.name} is how it appears on our
+                  menu.
+                </p>
+              </Reveal>
+            )}
           </div>
         </Container>
       </section>

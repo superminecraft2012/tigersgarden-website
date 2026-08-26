@@ -7,16 +7,32 @@ import { Button } from "@/components/Button";
 import { MenuBrowser } from "@/components/MenuBrowser";
 import { menu, categories, categoryTaglines } from "@/lib/menu";
 import { site, primary } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { canonical, graph, menuNode, breadcrumbs, restaurantRef } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Menu",
+  title: "Thai & Laotian Menu in Vancouver, WA",
   description:
     "Tiger's Garden's full Thai & Laotian menu, appetizers, soups, salads, stir-fries, curries, noodles, fried rice, desserts, and drinks.",
+  alternates: { canonical: canonical("/menu") },
 };
 
 export default function MenuPage() {
+  // Schema is derived from the same `categories` constant the page renders,
+  // so the marked-up sections cannot drift from the rendered sections.
+  const data = graph(
+    { ...restaurantRef, "@type": "Restaurant", hasMenu: menuNode(categories) },
+    menuNode(categories),
+    breadcrumbs([
+      { name: "Home", path: "/" },
+      { name: "Menu", path: "/menu" },
+    ]),
+  );
+
   return (
     <>
+      <JsonLd data={data} />
+
       {/* 1. HERO */}
       <section className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-tg-black">
         <Image
@@ -56,6 +72,9 @@ export default function MenuPage() {
             >
               <Button href={site.orderUrl} data-track="order_click" target="_blank" variant="primary">
                 Order Online
+              </Button>
+              <Button href="/dishes" variant="outline">
+                Dish guides
               </Button>
               <Button href={primary.phoneHref} data-track="call_click" variant="outline">
                 Call {primary.phone}

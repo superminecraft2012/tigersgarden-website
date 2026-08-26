@@ -57,6 +57,38 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/*
+ * The page may never pan sideways or paint past the viewport.
+ *
+ * `clip` rather than `hidden` on purpose: `hidden` turns the root into a
+ * scroll container and breaks the fixed Header and the sticky menu category
+ * nav. `clip` cuts the overflow without creating one, so both survive.
+ *
+ * This is a guard, not the fix — the real overflow sources are corrected at
+ * source. It exists so a future edit cannot reintroduce a sideways pan.
+ *
+ * It does NOT restrict pinch-to-zoom. Zoom pans the visual viewport, which the
+ * browser handles above this layer, so a zoomed-in reader can still reach
+ * every edge of the page.
+ */
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+  max-width: 100%;
+  /* Keep edge content clear of the notch and home indicator, now that the
+     viewport is viewport-fit:cover. Resolves to 0 where there is no inset. */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Nothing may out-size its column: media and embeds are the usual culprits. */
+img, svg, video, canvas, iframe {
+  max-width: 100%;
+}
+
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
   font-feature-settings: "ss01", "ss02";
@@ -137,5 +169,39 @@ body {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/*
+ * Touch-target floor. Applied only where the pointer is coarse, so the
+ * desktop layout keeps its tighter rhythm while a finger still gets a 44px
+ * target. Expands the hit area, never the type size.
+ */
+@media (pointer: coarse) {
+  .tg-tap {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+/*
+ * Extends a link's touch target to 44px without changing its layout box.
+ * Used where the element carries absolutely-positioned decoration (the active
+ * underline in the desktop nav) that growing the box would displace.
+ * Coarse pointers only — a mouse does not need it.
+ */
+@media (pointer: coarse) {
+  .tg-tap-area {
+    position: relative;
+  }
+  .tg-tap-area::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 44px;
+    transform: translateY(-50%);
   }
 }

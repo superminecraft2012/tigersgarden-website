@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/Container";
@@ -11,7 +12,13 @@ import { GoogleMap } from "@/components/GoogleMap";
 import { getCustomerFavorites, getSignatures } from "@/lib/menu";
 import { SignatureCarousel } from "@/components/SignatureCarousel";
 import { site, primary } from "@/lib/site";
+import { JsonLd } from "@/components/JsonLd";
+import { canonical, graph, restaurantNode } from "@/lib/seo";
 import { aboutHero, aboutCuisine } from "@/lib/about";
+
+export const metadata: Metadata = {
+  alternates: { canonical: canonical("/") },
+};
 
 const features = [
   {
@@ -66,6 +73,8 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={graph(restaurantNode())} />
+
       {/* ============ 1. HERO ============ */}
       <section className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-tg-black">
         <Image
@@ -96,19 +105,20 @@ export default function HomePage() {
               <span className="block h-[1px] w-10 bg-current opacity-70" />
             </span>
 
-            <h1
-              className="font-display uppercase break-words leading-[0.86] tracking-[-0.02em] text-[clamp(3.5rem,11vw,9.5rem)] text-tg-cream opacity-0 [animation:var(--animate-fade-up)]"
-              style={{ animationDelay: "0.1s" }}
-            >
-              Tiger&rsquo;s Garden
+            <h1 className="flex flex-col items-center gap-3">
+              <span
+                className="font-display uppercase break-words leading-[0.86] tracking-[-0.02em] text-[clamp(3.5rem,11vw,9.5rem)] text-tg-cream opacity-0 [animation:var(--animate-fade-up)]"
+                style={{ animationDelay: "0.1s" }}
+              >
+                Tiger&rsquo;s Garden
+              </span>{" "}
+              <span
+                className="font-serif italic text-[clamp(1.5rem,4vw,3rem)] text-tg-orange leading-tight opacity-0 [animation:var(--animate-fade-up)]"
+                style={{ animationDelay: "0.25s" }}
+              >
+                Thai &amp; Laotian Restaurant in Vancouver, WA
+              </span>
             </h1>
-
-            <p
-              className="font-serif italic text-[clamp(1.5rem,4vw,3rem)] text-tg-orange leading-tight opacity-0 [animation:var(--animate-fade-up)]"
-              style={{ animationDelay: "0.25s" }}
-            >
-              Thai &amp; Laotian
-            </p>
 
             <div
               className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4 opacity-0 [animation:var(--animate-fade-up)]"
@@ -410,7 +420,7 @@ export default function HomePage() {
                 </div>
                 <a
                   href={primary.phoneHref} data-track="call_click"
-                  className="tg-link mt-2 inline-flex w-fit font-display uppercase tracking-[0.25em] text-sm text-white"
+                  className="tg-link mt-2 tg-tap inline-flex w-fit font-display uppercase tracking-[0.25em] text-sm text-white"
                 >
                   {primary.phone}
                 </a>

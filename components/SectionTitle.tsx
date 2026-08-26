@@ -5,11 +5,14 @@ export function SectionTitle({
   children,
   align = "left",
   tone = "cream",
+  as: Tag = "h2",
 }: {
   eyebrow?: string;
   children: ReactNode;
   align?: "left" | "center";
   tone?: "cream" | "black";
+  /** Promote to h1 where this is the page's top-level heading. */
+  as?: "h1" | "h2";
 }) {
   const isCenter = align === "center";
   const isBlack = tone === "black";
@@ -25,11 +28,11 @@ export function SectionTitle({
           {eyebrow}
         </span>
       )}
-      <h2
+      <Tag
         className={`font-display uppercase leading-[0.92] tracking-[-0.01em] text-5xl md:text-6xl lg:text-7xl ${isBlack ? "text-tg-black" : "text-tg-cream"}`}
       >
         {children}
-      </h2>
+      </Tag>
     </div>
   );
 }
