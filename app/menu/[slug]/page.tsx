@@ -33,6 +33,13 @@ export async function generateMetadata({
     title: item.name,
     description: item.short,
     alternates: { canonical: canonical(`/menu/${item.slug}`) },
+    // Deliberately not indexed. These are catalogue entries — most are a name,
+    // a line of description and an order button, which is below the bar for a
+    // page that should compete in search. Worse, the handful that are
+    // substantial (pad thai, tom yum, massaman, larb, mango sticky rice)
+    // would cannibalise their own /dishes/ landing page.
+    // `follow` is kept so their links still pass to /menu and /dishes.
+    robots: { index: false, follow: true },
   };
 }
 

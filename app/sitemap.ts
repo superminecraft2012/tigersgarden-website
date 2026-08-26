@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { canonical } from "@/lib/seo";
-import { menu } from "@/lib/menu";
 import { dishes } from "@/lib/dishes";
 
 /**
@@ -39,11 +38,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
-    ...menu.map((m) => ({
-      url: canonical(`/menu/${m.slug}`),
-      lastModified: now,
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-    })),
+    // Menu item pages are intentionally absent: they carry noindex, and a
+    // sitemap should only advertise URLs you want indexed. They remain
+    // crawlable through /menu, which lists every one of them.
   ];
 }

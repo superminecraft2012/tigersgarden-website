@@ -192,6 +192,19 @@ name on the page ("Also called Pad Khee Mao and drunken noodles. It is the same
 dish…"), and bogus slugs still return a hard 404 rather than redirecting —
 these are genuine renames, not aliases for made-up URLs.
 
+## Indexing policy
+
+The 69 `/menu/[slug]` pages predate this work — `generateStaticParams()` and a
+69-item `lib/menu.ts` both existed at `dcb203f`, before the SEO pass. They were
+however 48-of-69 orphaned, and the fix for that made all 69 indexable, which
+was the wrong outcome: most are a name, a line and an order button, and the
+five substantial ones cannibalised their own `/dishes/` landing page.
+
+They now carry `noindex, follow` and are absent from the sitemap. They remain
+real routes, still linked from `/menu` (69/69 in the DOM), so browsing is
+unaffected and their links still pass equity. The sitemap is 13 URLs, every one
+of them a page intended to compete.
+
 ## What was built
 
 - `lib/seo.ts` — canonical origin, the single `Restaurant` node and its stable
