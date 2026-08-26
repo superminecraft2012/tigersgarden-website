@@ -8,7 +8,7 @@ import { MenuCard } from "@/components/MenuCard";
 import { Reveal } from "@/components/Reveal";
 import { Button } from "@/components/Button";
 import { menu, getMenuItem, getRelated } from "@/lib/menu";
-import { site } from "@/lib/site";
+import { site, primary } from "@/lib/site";
 import { JsonLd } from "@/components/JsonLd";
 import { canonical, graph, menuItemNode, breadcrumbs, restaurantRef } from "@/lib/seo";
 
@@ -155,6 +155,28 @@ export default async function MenuItemPage({
                 </p>
               </Reveal>
 
+              <Reveal delay={0.42}>
+                <p className="mt-8 max-w-xl text-tg-cream/80 text-lg leading-relaxed">
+                  {item.description}
+                </p>
+              </Reveal>
+
+              {item.alsoKnownAs && item.alsoKnownAs.length > 0 && (
+                <Reveal delay={0.46}>
+                  <p className="mt-5 max-w-xl text-tg-cream/60 leading-relaxed">
+                    Also called{" "}
+                    {item.alsoKnownAs.map((n, i) => (
+                      <span key={n}>
+                        {i > 0 &&
+                          (i === item.alsoKnownAs!.length - 1 ? " and " : ", ")}
+                        <span className="text-tg-cream/80">{n}</span>
+                      </span>
+                    ))}
+                    . It is the same dish &mdash; {item.name} is how we list it.
+                  </p>
+                </Reveal>
+              )}
+
               <Reveal delay={0.5}>
                 <div className="mt-10 flex flex-wrap items-center gap-4">
                   <Button href={site.orderUrl} data-track="order_click" target="_blank" variant="primary">
@@ -170,43 +192,75 @@ export default async function MenuItemPage({
         </Container>
       </section>
 
-      {/* 2. DESCRIPTION */}
+      {/* 2. WHERE TO GET IT */}
       <section className="bg-tg-black py-20 md:py-28 border-t border-tg-cream/10">
         <Container>
           <div className="max-w-3xl mx-auto">
             <Reveal>
-              <SectionTitle eyebrow="About the dish">
-                What&rsquo;s in it.
+              <SectionTitle eyebrow="Where to get it">
+                {item.name} in Vancouver, WA
               </SectionTitle>
             </Reveal>
             <Reveal delay={0.15}>
-              <p className="mt-10 text-tg-cream/85 text-lg md:text-xl leading-relaxed">
-                {item.description}
+              <p className="mt-10 text-tg-cream/80 text-lg leading-relaxed">
+                {item.name} is on the {item.category.toLowerCase()} section of
+                our menu at {primary.address}, {primary.region}, facing Esther
+                Short Park. Dine in, pick up, or have it delivered.
               </p>
             </Reveal>
-            {item.alsoKnownAs && item.alsoKnownAs.length > 0 && (
-              <Reveal delay={0.22}>
-                <p className="mt-6 text-tg-cream/55 leading-relaxed">
-                  Also called{" "}
-                  {item.alsoKnownAs.map((n, i) => (
-                    <span key={n}>
-                      {i > 0 &&
-                        (i === item.alsoKnownAs!.length - 1 ? " and " : ", ")}
-                      <span className="text-tg-cream/75">{n}</span>
-                    </span>
-                  ))}
-                  . It is the same dish — {item.name} is how it appears on our
-                  menu.
-                </p>
-              </Reveal>
-            )}
+            <Reveal delay={0.22}>
+              <div className="mt-8 grid gap-8 sm:grid-cols-2">
+                <div>
+                  <h3 className="font-display uppercase tracking-[0.25em] text-xs text-tg-orange mb-4">
+                    Hours
+                  </h3>
+                  <ul className="flex flex-col gap-2">
+                    {primary.hours.business.map((h) => (
+                      <li key={h.days} className="flex gap-4 text-sm text-tg-cream/70">
+                        <span className="w-24 shrink-0 font-display uppercase tracking-[0.12em] text-[11px] text-tg-cream/55">
+                          {h.days}
+                        </span>
+                        <span className="tabular-nums">{h.time}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h3 className="font-display uppercase tracking-[0.25em] text-xs text-tg-orange mb-1">
+                    Find us
+                  </h3>
+                  <a
+                    href={primary.phoneHref}
+                    data-track="call_click"
+                    className="tg-tap tg-link w-fit text-tg-cream/80"
+                  >
+                    {primary.phone}
+                  </a>
+                  <a
+                    href={primary.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tg-tap tg-link w-fit text-tg-cream/80"
+                  >
+                    Get directions
+                  </a>
+                  <Link
+                    href="/menu"
+                    data-track="menu_click"
+                    className="tg-tap tg-link w-fit text-tg-orange"
+                  >
+                    See the full menu
+                  </Link>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </Container>
       </section>
 
       {/* 3. PAIRS WITH */}
       {related.length > 0 && (
-        <section className="bg-tg-orange-deep py-20 md:py-28">
+        <section className="bg-tg-rust py-20 md:py-28">
           <Container>
             <div className="mb-12 md:mb-16 max-w-3xl">
               <Reveal>
@@ -219,7 +273,7 @@ export default async function MenuItemPage({
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
               {related.map((r, idx) => (
                 <Reveal key={r.slug} delay={idx * 0.08} y={28}>
-                  <MenuCard item={r} />
+                  <MenuCard item={r} tone="cream" />
                 </Reveal>
               ))}
             </div>

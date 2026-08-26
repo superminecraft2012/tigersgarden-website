@@ -492,7 +492,7 @@ export const menu: MenuItem[] = [
   {
     slug: "pad-see-ew",
     alsoKnownAs: ["Pad See Ewi", "pad see eiw"],
-    name: "Pad See Ewi",
+    name: "Pad See Ew",
     category: "Noodle",
     short: "Wide rice noodles, egg, broccoli, cilantro.",
     description:
@@ -504,7 +504,7 @@ export const menu: MenuItem[] = [
   {
     slug: "pad-kee-mao",
     alsoKnownAs: ["Pad Khee Mao", "drunken noodles"],
-    name: "Pad Khee Mao",
+    name: "Pad Kee Mao",
     category: "Noodle",
     short: "Wide rice noodles, egg, broccoli, bell pepper, basil.",
     description:

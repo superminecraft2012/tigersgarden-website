@@ -2,7 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 import { MenuItem } from "@/lib/menu";
 
-export function MenuCard({ item }: { item: MenuItem }) {
+export function MenuCard({
+  item,
+  tone = "black",
+}: {
+  item: MenuItem;
+  /** Surface the card sits on. "cream" is for dark or saturated backgrounds. */
+  tone?: "black" | "cream";
+}) {
+  const onDark = tone === "cream";
   return (
     <Link
       href={`/menu/${item.slug}`} data-track="menu_click"
@@ -28,7 +36,11 @@ export function MenuCard({ item }: { item: MenuItem }) {
         )}
       </div>
       <div className="flex items-baseline justify-between gap-4">
-        <h3 className="font-display uppercase tracking-[-0.01em] text-2xl text-tg-black transition-colors duration-300 group-hover:text-tg-orange">
+        <h3 className={`font-display uppercase tracking-[-0.01em] text-2xl transition-colors duration-300 ${
+            onDark
+              ? "text-tg-cream group-hover:text-tg-ember"
+              : "text-tg-black group-hover:text-tg-orange"
+          }`}>
           {item.name}
         </h3>
         {item.spice && item.spice > 0 ? (
@@ -44,16 +56,28 @@ export function MenuCard({ item }: { item: MenuItem }) {
           </span>
         ) : null}
       </div>
-      <p className="text-sm text-tg-black/65 leading-relaxed">{item.short}</p>
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em] text-tg-black/40">
+      <p
+        className={`text-sm leading-relaxed ${
+          onDark ? "text-tg-cream/85" : "text-tg-black/65"
+        }`}
+      >
+        {item.short}
+      </p>
+      <div className={`flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em] ${
+          onDark ? "text-tg-cream/85" : "text-tg-black/40"
+        }`}>
         <span className="min-w-0 break-words">{item.category}</span>
         {item.vegetarianAvailable && (
-          <span className="rounded-full border border-tg-cream/15 px-2 py-0.5 text-[11px] sm:text-[10px]">
+          <span className={`rounded-full px-2 py-0.5 text-[11px] sm:text-[10px] ${
+              onDark ? "border border-tg-cream/40" : "border border-tg-black/20"
+            }`}>
             Veg opt.
           </span>
         )}
         {item.glutenFreeAvailable && (
-          <span className="rounded-full border border-tg-cream/15 px-2 py-0.5 text-[11px] sm:text-[10px]">
+          <span className={`rounded-full px-2 py-0.5 text-[11px] sm:text-[10px] ${
+              onDark ? "border border-tg-cream/40" : "border border-tg-black/20"
+            }`}>
             GF opt.
           </span>
         )}
