@@ -40,7 +40,7 @@ Three signals per dish: 12 months of English Wikipedia pageviews
 autocomplete for `<dish>`, `<dish> near me` and `<dish> vancouver wa`, and the
 intent those autocompletes express.
 
-### Selected — 6 dish pages
+### Selected — 5 dish pages
 
 | Dish | 12mo views | Intent evidence |
 |---|---:|---|
@@ -49,7 +49,6 @@ intent those autocompletes express.
 | Massaman Curry | 188,250 | `massaman curry near me` and `best massaman curry near me` both fire |
 | Mango Sticky Rice | 92,772 | `mango sticky rice vancouver wa` autocompletes; least recipe-contaminated dessert |
 | Larb | 62,964 | `larb near me` fires; autocomplete surfaces competing restaurant brands |
-| Papaya Salad | 36,983 | `papaya salad near me` is #3 base suggestion |
 
 ### Rejected, and why
 
@@ -66,6 +65,11 @@ intent those autocompletes express.
 - **Hot Basil** — autocomplete is dominated by *competitor restaurant brands*
   (`hot basil thai kitchen mukilteo`, `hot basil overland park`) and
   `hot basil plant`. Unusable as a slug.
+- **Papaya Salad** (36,983) — made the shortlist on intent (`papaya salad near
+  me` is its #3 suggestion) but had the weakest demand of the six, well under
+  the 62,964 of the next lowest. Dropped to keep the set tight.
+  `/dishes/papaya-salad` permanently redirects to `/menu/papaya-salad`; the
+  dish keeps its menu page and its billing on `/lao-food-vancouver-wa`.
 - **Fried Tofu, Pot Stickers, Tempura, Wonton Soup, Yakisoba, Egg Rolls,
   Orange Chicken, Crab Rangoon, Fried Calamari** — pan-cuisine inflation. Tofu
   shows 459,023 views because the article is the generic *Tofu* page; jiaozi,
@@ -199,7 +203,7 @@ these are genuine renames, not aliases for made-up URLs.
 - `components/MenuBrowser.tsx` — **rewritten** from a client-side tab component
   to a server component that renders every section. Category tabs became
   anchor links into those sections.
-- `app/dishes/` — hub plus `[dish]` pages.
+- `app/dishes/` — hub plus five `[dish]` pages.
 - `app/lao-food-vancouver-wa/` — the single cuisine-category-city page.
 - `components/Footer.tsx` — "Popular Dishes" block with descriptive anchors.
 - `app/order-online/` — pickup/delivery page built on the genuinely verified

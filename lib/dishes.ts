@@ -180,40 +180,7 @@ export const dishes: Dish[] = [
         a: "Gai means chicken, so larb gai is larb made with chicken. The larb at Tiger's Garden is made with ground chicken.",
       },
     ],
-    related: ["papaya-salad", "tom-yum-soup", "pad-thai"],
-  },
-  {
-    slug: "papaya-salad",
-    menuSlug: "papaya-salad",
-    h1: "Papaya Salad in Vancouver, WA",
-    label: "Papaya Salad",
-    title: "Best Papaya Salad in Vancouver, WA",
-    metaDescription:
-      "Green papaya salad at Tiger's Garden in downtown Vancouver, WA — shredded green papaya pounded with chili, garlic, lime, fish sauce and crushed peanuts.",
-    alsoKnownAs: ["som tum", "som tam", "tam mak hoong", "green papaya salad"],
-    background: [
-      "Green papaya salad is made from unripe papaya, which is firm and barely sweet and behaves more like a vegetable than a fruit. It is shredded and then bruised in a tall mortar with a pestle — pounding rather than tossing, so the dressing is driven into the papaya instead of sitting on it.",
-      "The dish is shared between Laos and northeastern Thailand. It is called som tum in Thai and tam mak hoong in Lao, and the two versions differ mainly in seasoning.",
-    ],
-    faq: [
-      {
-        q: "What is in the papaya salad at Tiger's Garden?",
-        a: "Shredded green papaya pounded in a mortar with chili, garlic, lime, fish sauce and crushed peanuts.",
-      },
-      {
-        q: "Is papaya salad the same as som tum?",
-        a: "Yes. Som tum is the Thai name and tam mak hoong is the Lao name for the same green papaya salad. The menu lists it as Papaya Salad.",
-      },
-      {
-        q: "Is papaya salad made with ripe papaya?",
-        a: "No. It is made with green, unripe papaya, which is firm and not sweet.",
-      },
-      {
-        q: "Does the papaya salad contain fish sauce?",
-        a: "Yes. The menu lists fish sauce among the ingredients, alongside chili, garlic, lime and crushed peanuts. If you need to avoid an ingredient, call (360) 693-9585 and ask before ordering.",
-      },
-    ],
-    related: ["larb", "tom-yum-soup", "mango-sticky-rice"],
+    related: ["tom-yum-soup", "pad-thai", "massaman-curry"],
   },
   {
     slug: "mango-sticky-rice",
@@ -246,7 +213,7 @@ export const dishes: Dish[] = [
         a: "Sweet and creamy rather than spiced. The menu describes sweet coconut-soaked sticky rice with fresh mango and a drizzle of coconut cream — the rice is chewy and the mango soft.",
       },
     ],
-    related: ["pad-thai", "massaman-curry", "papaya-salad"],
+    related: ["pad-thai", "massaman-curry", "larb"],
   },
 ];
 
