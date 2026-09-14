@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { DishImage } from "@/components/DishImage";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -92,13 +92,10 @@ export default async function MenuItemPage({
                 >
                   <span aria-hidden>&larr;</span> Back to menu
                 </Link>
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  fill
+                <DishImage
+                  item={item}
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                  priority
+                  preload
                 />
               </div>
             </div>

@@ -16,7 +16,8 @@ export type MenuItem = {
   category: MenuCategory;
   short: string;
   description: string;
-  image: string;
+  /** Studio photo. Omit until the dish has been shot; DishImage falls back to placeholder art. */
+  image?: string;
   spice?: 0 | 1 | 2 | 3;
   vegetarianAvailable?: boolean;
   glutenFreeAvailable?: boolean;
@@ -24,7 +25,7 @@ export type MenuItem = {
   /** Other names for the same dish, shown on the page after a slug rename. */
   alsoKnownAs?: string[];
   pairings?: string[];
-  // Placeholder hue used as fallback art if an image fails to load.
+  // Two-hue gradient for the placeholder art shown while a dish has no photo.
   hue: [string, string];
 };
 
@@ -75,7 +76,6 @@ export const menu: MenuItem[] = [
     short: "Tofu, rice noodles, and vegetables in rice paper, peanut sauce.",
     description:
       "Tofu, rice noodles, and an assortment of vegetables wrapped in rice paper. Served with peanut sauce.",
-    image: "/images/menu/appetizers/a2-fresh-salad-rolls.png",
     spice: 0,
     signature: true,
     hue: ["#f4e9d6", "#5a3a10"],
@@ -88,7 +88,6 @@ export const menu: MenuItem[] = [
     short: "Crab and cream cheese in a crisp wonton shell.",
     description:
       "Crab meat and cream cheese folded into wonton skins, fried until golden. Served with sweet chili sauce.",
-    image: "/images/menu/appetizers/a3-fried-crab-wontons.png",
     spice: 0,
     hue: ["#f4b042", "#5a2d08"],
   },
@@ -99,7 +98,6 @@ export const menu: MenuItem[] = [
     short: "Chicken and vegetable pot stickers, sweet soybean sauce.",
     description:
       "Chicken and vegetable pot stickers, fried or steamed. Served with sweet soybean sauce.",
-    image: "/images/menu/appetizers/a4-pot-stickers.png",
     spice: 0,
     hue: ["#e8b14a", "#3a2208"],
   },
@@ -110,7 +108,6 @@ export const menu: MenuItem[] = [
     short: "Battered shrimp with toasted coconut crust.",
     description:
       "Plump shrimp coated in a toasted-coconut batter and fried golden. Served with sweet and sour sauce.",
-    image: "/images/menu/appetizers/a5-coconut-shrimps.png",
     spice: 0,
     hue: ["#f4e9d6", "#8a5a10"],
   },
@@ -121,7 +118,6 @@ export const menu: MenuItem[] = [
     short: "Fresh avocado, lettuce, bean sprouts, cilantro, carrot, rice noodles in rice paper, peanut sauce.",
     description:
       "Fresh slices of avocado, lettuce, bean sprouts, cilantro, carrot, and rice noodles wrapped in clear rice paper. Served with peanut sauce.",
-    image: "/images/menu/appetizers/a6-avocado-rolls.png",
     spice: 0,
     vegetarianAvailable: true,
     hue: ["#7ea35a", "#1f3a10"],
@@ -133,7 +129,6 @@ export const menu: MenuItem[] = [
     short: "House-spiced fried wings, with a kick.",
     description:
       "Our take on hot wings, fried crispy and tossed in a Thai-leaning chili glaze. Served with cucumber slaw to cool things down.",
-    image: "/images/menu/appetizers/a7-tiger-hot-wings.png",
     spice: 2,
     signature: true,
     hue: ["#f25a1c", "#5a1208"],
@@ -156,7 +151,6 @@ export const menu: MenuItem[] = [
     short: "Choice of filling in puff pastry, deep fried.",
     description:
       "Choice of filling wrapped in puff pastry dough, deep fried until golden.",
-    image: "/images/menu/appetizers/a9-tiger-curry-pops.png",
     spice: 1,
     hue: ["#f4b042", "#5a2208"],
   },
@@ -167,7 +161,6 @@ export const menu: MenuItem[] = [
     short: "Fried tofu with sweet and sour sauce, crushed peanuts.",
     description:
       "Fried tofu served with sweet and sour sauce, topped with crushed peanuts.",
-    image: "/images/menu/appetizers/a10-fried-tofu.png",
     spice: 0,
     vegetarianAvailable: true,
     hue: ["#e8b14a", "#3a2208"],
@@ -179,7 +172,6 @@ export const menu: MenuItem[] = [
     short: "Breaded calamari, sweet and sour sauce.",
     description:
       "Breaded calamari, served with sweet and sour sauce.",
-    image: "/images/menu/appetizers/a11-fried-calamari.png",
     spice: 0,
     hue: ["#f4e9d6", "#5a3208"],
   },
@@ -190,7 +182,6 @@ export const menu: MenuItem[] = [
     short: "Breaded shrimp, sweet and sour sauce.",
     description:
       "Breaded shrimp, served with sweet and sour sauce and sweet soy sauce.",
-    image: "/images/menu/appetizers/a12-tempura-shrimp.png",
     spice: 0,
     hue: ["#f4b042", "#5a3208"],
   },
@@ -256,7 +247,6 @@ export const menu: MenuItem[] = [
     short: "Green papaya, chili, lime, fish sauce, peanut.",
     description:
       "Shredded green papaya pounded in a mortar with chili, garlic, lime, fish sauce, and crushed peanuts. Sharp, spicy, addictive.",
-    image: "/images/menu/salads/d31-papaya-salad.png",
     spice: 3,
     glutenFreeAvailable: true,
     hue: ["#f4b042", "#3a2208"],
@@ -268,7 +258,6 @@ export const menu: MenuItem[] = [
     short: "Mixed greens, tofu, crispy wontons, peanut sauce.",
     description:
       "Crisp mixed greens, onion, cucumber, tomato, and tofu topped with crispy wontons and peanut sauce.",
-    image: "/images/menu/salads/d32-tiger-house-salad.png",
     spice: 0,
     vegetarianAvailable: true,
     hue: ["#7ea35a", "#2a3a10"],
@@ -292,7 +281,6 @@ export const menu: MenuItem[] = [
     short: "Grilled shrimp, spicy lime juice, spring mix.",
     description:
       "Grilled shrimp tossed with spicy lime juice served over spring mix.",
-    image: "/images/menu/salads/d34-shrimp-salad.png",
     spice: 2,
     glutenFreeAvailable: true,
     hue: ["#f25a1c", "#2a0a02"],
@@ -319,7 +307,6 @@ export const menu: MenuItem[] = [
     short: "Pineapple, bell pepper, tomato, tangy sauce.",
     description:
       "Stir-fried with pineapple, bell pepper, onion, tomato, and cucumber in a balanced sweet-and-sour sauce.",
-    image: "/images/menu/stir-fries/d41-sweet-sour.png",
     spice: 0,
     hue: ["#f4b042", "#5a3208"],
   },
@@ -343,7 +330,6 @@ export const menu: MenuItem[] = [
     short: "Fresh ginger, mushroom, scallion.",
     description:
       "Sliced fresh ginger, black mushroom, scallion, onion, and bell pepper, stir-fried in a light brown sauce.",
-    image: "/images/menu/stir-fries/d43-ginger.png",
     spice: 0,
     hue: ["#f4e9d6", "#5a3208"],
   },
@@ -379,7 +365,6 @@ export const menu: MenuItem[] = [
     short: "Holy basil, chili, garlic, bell pepper.",
     description:
       "Holy basil, fresh chili, garlic, bell pepper, and onion stir-fried fast and hot. A Thai street-food classic.",
-    image: "/images/menu/stir-fries/d46-hot-basil.png",
     spice: 3,
     signature: true,
     hue: ["#c43e0a", "#1f3010"],
@@ -405,7 +390,6 @@ export const menu: MenuItem[] = [
     short: "Slow-simmered curry, potato, peanut, tamarind.",
     description:
       "Rich, slow-simmered massaman curry with potato, onion, roasted peanut, and a tamarind-led sweet-savory finish. Deep, warming, complex.",
-    image: "/images/menu/curry/d51-massaman-curry.png",
     spice: 1,
     glutenFreeAvailable: true,
     hue: ["#8a3210", "#2a0a02"],
@@ -429,7 +413,6 @@ export const menu: MenuItem[] = [
     short: "Red curry paste, coconut milk, bamboo, basil.",
     description:
       "Our house red curry, red curry paste simmered with coconut milk, bamboo shoot, bell pepper, and Thai basil. Spicy, lush, and one of the table favorites.",
-    image: "/images/menu/curry/d53-red-curry.png",
     spice: 2,
     signature: true,
     glutenFreeAvailable: true,
@@ -443,7 +426,6 @@ export const menu: MenuItem[] = [
     short: "Green curry paste, coconut milk, eggplant, basil.",
     description:
       "Green curry paste built on fresh green chili, basil, and lime leaf. Simmered with coconut milk, Thai eggplant, bamboo shoot, and bell pepper.",
-    image: "/images/menu/curry/d54-green-curry.png",
     spice: 2,
     signature: true,
     glutenFreeAvailable: true,
@@ -457,7 +439,6 @@ export const menu: MenuItem[] = [
     short: "Roasted pumpkin in red curry, basil.",
     description:
       "Sweet kabocha pumpkin simmered in red curry with coconut milk, basil, and bell pepper. Round, sweet, and warming.",
-    image: "/images/menu/curry/d55-pumpkin-curry.png",
     spice: 2,
     glutenFreeAvailable: true,
     hue: ["#f4b042", "#5a2d08"],
@@ -497,7 +478,6 @@ export const menu: MenuItem[] = [
     short: "Wide rice noodles, egg, broccoli, cilantro.",
     description:
       "Wide rice noodles stir-fried with egg, broccoli, and cilantro.",
-    image: "/images/menu/noodle/d81-pad-see-ewi.png",
     spice: 0,
     hue: ["#5a3a10", "#1f1208"],
   },
@@ -509,7 +489,6 @@ export const menu: MenuItem[] = [
     short: "Wide rice noodles, egg, broccoli, bell pepper, basil.",
     description:
       "Wide rice noodles stir-fried with egg, broccoli, bell pepper, and basil.",
-    image: "/images/menu/noodle/d82-pad-khee-mao.png",
     spice: 3,
     hue: ["#c43e0a", "#1f3010"],
   },
@@ -520,7 +499,6 @@ export const menu: MenuItem[] = [
     short: "Wide rice noodles, broccoli, carrot, cabbage, peanut sauce.",
     description:
       "Wide rice noodles with broccoli, carrot, and cabbage topped with peanut sauce.",
-    image: "/images/menu/noodle/d83-pra-ram-noodle.png",
     spice: 0,
     hue: ["#e8b14a", "#3a2208"],
   },
@@ -531,7 +509,6 @@ export const menu: MenuItem[] = [
     short: "Egg noodles, mixed vegetables, savory sauce.",
     description:
       "Stir-fried egg noodles with cabbage, carrot, onion, bell pepper, and our savory yakisoba sauce.",
-    image: "/images/menu/noodle/d84-yakisoba.png",
     spice: 0,
     hue: ["#e8b14a", "#5a3208"],
   },
@@ -555,7 +532,6 @@ export const menu: MenuItem[] = [
     short: "Fried rice, pineapple, cashew, raisin, curry powder.",
     description:
       "Fried rice with fresh pineapple, roasted cashew, raisin, and a whisper of curry powder. Sweet, savory, and a guest favorite.",
-    image: "/images/menu/fried-rice/d91-pineapple-cashew-fried-rice.png",
     spice: 0,
     signature: true,
     hue: ["#f4b042", "#5a2208"],
@@ -579,7 +555,6 @@ export const menu: MenuItem[] = [
     short: "Chicken with broccoli, lettuce, homemade sauce.",
     description:
       "Chicken with broccoli, lettuce, and homemade sauce.",
-    image: "/images/menu/fried-rice/d93-orange-chicken.png",
     spice: 0,
     hue: ["#f25a1c", "#5a2208"],
   },
@@ -592,7 +567,6 @@ export const menu: MenuItem[] = [
     short: "Coconut ice cream, toasted peanut.",
     description:
       "Two scoops of coconut ice cream topped with toasted peanut. A cool finish for a hot table.",
-    image: "/images/menu/desserts/coconut-ice-cream.png",
     spice: 0,
     vegetarianAvailable: true,
     hue: ["#f4e9d6", "#5a3a10"],
@@ -604,7 +578,6 @@ export const menu: MenuItem[] = [
     short: "Mango ice cream, simple and sweet.",
     description:
       "Two scoops of mango ice cream. Sweet, cold, exactly the thing.",
-    image: "/images/menu/desserts/mango-ice-cream.png",
     spice: 0,
     vegetarianAvailable: true,
     hue: ["#f4b042", "#5a2d08"],
@@ -616,7 +589,6 @@ export const menu: MenuItem[] = [
     short: "Sweet sticky rice, fresh mango, coconut cream.",
     description:
       "Sweet coconut-soaked sticky rice paired with fresh mango and a drizzle of coconut cream. The classic Thai finish.",
-    image: "/images/menu/desserts/mango-sticky-rice.png",
     spice: 0,
     signature: true,
     vegetarianAvailable: true,
@@ -628,7 +600,6 @@ export const menu: MenuItem[] = [
     category: "Desserts",
     short: "Fried bananas.",
     description: "Fried bananas.",
-    image: "/images/menu/desserts/fried-bananas.png",
     spice: 0,
     hue: ["#f4b042", "#5a2d08"],
   },
@@ -638,7 +609,6 @@ export const menu: MenuItem[] = [
     category: "Desserts",
     short: "Sweet sticky rice with ice cream.",
     description: "Sweet sticky rice with ice cream.",
-    image: "/images/menu/desserts/sweet-sticky-rice-w-ice-cream.png",
     spice: 0,
     hue: ["#f4e9d6", "#5a3a10"],
   },
@@ -661,7 +631,6 @@ export const menu: MenuItem[] = [
     short: "Sweet jasmine-green tea, condensed milk, ice.",
     description:
       "Fragrant Thai jasmine-green tea sweetened with condensed milk and served over ice.",
-    image: "/images/menu/beverages/thai-ice-green-tea.png",
     hue: ["#7ea35a", "#2a3a10"],
   },
   {
@@ -670,7 +639,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Cold, lightly sweet coconut juice.",
     description: "Cold coconut juice, lightly sweet, refreshing.",
-    image: "/images/menu/beverages/coconut-juice.png",
     hue: ["#f4e9d6", "#5a3a10"],
   },
   {
@@ -679,7 +647,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "House lemonade, on ice.",
     description: "Fresh-squeezed lemonade.",
-    image: "/images/menu/beverages/lemonade.png",
     hue: ["#f4e9d6", "#8a5a10"],
   },
   {
@@ -688,7 +655,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Sparkling lime soda.",
     description: "Sparkling soda with fresh lime.",
-    image: "/images/menu/beverages/lime-soda.png",
     hue: ["#7ea35a", "#2a3a10"],
   },
   {
@@ -697,7 +663,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Classic Coca-Cola.",
     description: "Classic Coca-Cola.",
-    image: "/images/menu/beverages/coke.png",
     hue: ["#c43e0a", "#1a0a02"],
   },
   {
@@ -706,7 +671,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Diet Coca-Cola.",
     description: "Diet Coca-Cola.",
-    image: "/images/menu/beverages/diet-coke.png",
     hue: ["#c43e0a", "#1a0a02"],
   },
   {
@@ -715,7 +679,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Classic Sprite.",
     description: "Classic Sprite.",
-    image: "/images/menu/beverages/sprite.png",
     hue: ["#7ea35a", "#2a3a10"],
   },
   {
@@ -724,7 +687,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Hot tea.",
     description: "Hot tea.",
-    image: "/images/menu/beverages/hot-tea.png",
     hue: ["#8a5a10", "#2a1208"],
   },
   {
@@ -734,7 +696,6 @@ export const menu: MenuItem[] = [
     short: "Classic Thai iced tea with condensed milk.",
     description:
       "Classic Thai iced tea with condensed milk.",
-    image: "/images/menu/beverages/thai-iced-tea.png",
     hue: ["#f4b042", "#5a2208"],
   },
   {
@@ -743,7 +704,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Unsweetened iced jasmine tea.",
     description: "Unsweetened iced jasmine tea.",
-    image: "/images/menu/beverages/unsweet-iced-jasmine-tea.png",
     hue: ["#7ea35a", "#2a3a10"],
   },
   {
@@ -752,7 +712,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Unsweetened iced green tea.",
     description: "Unsweetened iced green tea.",
-    image: "/images/menu/beverages/unsweet-iced-green-tea.png",
     hue: ["#7ea35a", "#2a3a10"],
   },
   {
@@ -761,7 +720,6 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Unsweetened iced black tea.",
     description: "Unsweetened iced black tea.",
-    image: "/images/menu/beverages/unsweet-iced-black-tea.png",
     hue: ["#5a3a10", "#1f1208"],
   },
   {
@@ -781,7 +739,6 @@ export const menu: MenuItem[] = [
     category: "Side Orders",
     short: "Small side of jasmine rice.",
     description: "A small side of jasmine rice.",
-    image: "/images/menu/side-orders/side-jasmine-rice-s.png",
     hue: ["#f4e9d6", "#5a3a10"],
   },
   {
@@ -790,7 +747,6 @@ export const menu: MenuItem[] = [
     category: "Side Orders",
     short: "Large side of jasmine rice.",
     description: "A large side of jasmine rice.",
-    image: "/images/menu/side-orders/side-jasmine-rice-l.png",
     hue: ["#f4e9d6", "#5a3a10"],
   },
   {
@@ -799,7 +755,6 @@ export const menu: MenuItem[] = [
     category: "Side Orders",
     short: "Small side of brown rice.",
     description: "A small side of brown rice.",
-    image: "/images/menu/side-orders/side-brown-rice-s.png",
     hue: ["#8a5a10", "#3a2208"],
   },
   {
@@ -808,7 +763,6 @@ export const menu: MenuItem[] = [
     category: "Side Orders",
     short: "Large side of brown rice.",
     description: "A large side of brown rice.",
-    image: "/images/menu/side-orders/side-brown-rice-l.png",
     hue: ["#8a5a10", "#3a2208"],
   },
   {
@@ -817,7 +771,6 @@ export const menu: MenuItem[] = [
     category: "Side Orders",
     short: "Side of steamed mixed vegetables.",
     description: "A side of steamed mixed vegetables.",
-    image: "/images/menu/side-orders/side-steamed-mixed-vegetables.png",
     hue: ["#7ea35a", "#1f3a10"],
   },
   {
@@ -826,7 +779,6 @@ export const menu: MenuItem[] = [
     category: "Side Orders",
     short: "House peanut sauce, large side.",
     description: "A large side of our house peanut sauce.",
-    image: "/images/menu/side-orders/side-peanut-sauce-l.png",
     hue: ["#e8b14a", "#5a3208"],
   },
   {
@@ -835,7 +787,6 @@ export const menu: MenuItem[] = [
     category: "Side Orders",
     short: "House peanut sauce, small side.",
     description: "A small side of our house peanut sauce.",
-    image: "/images/menu/side-orders/side-peanut-sauce-s.png",
     hue: ["#e8b14a", "#5a3208"],
   },
 ];
@@ -859,7 +810,9 @@ export function getRelated(item: MenuItem, count = 3): MenuItem[] {
 }
 
 export function getSignatures(): MenuItem[] {
-  return menu.filter((m) => m.signature);
+  // Photographed dishes lead the carousel; placeholders follow in menu order.
+  const sig = menu.filter((m) => m.signature);
+  return [...sig.filter((m) => m.image), ...sig.filter((m) => !m.image)];
 }
 
 export function getCustomerFavorites(): MenuItem[] {

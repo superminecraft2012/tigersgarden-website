@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import { DishImage } from "./DishImage";
 import { MenuItem } from "@/lib/menu";
 
 export function MenuCard({
@@ -22,12 +22,10 @@ export function MenuCard({
           background: `radial-gradient(120% 90% at 30% 20%, ${item.hue[0]}33 0%, ${item.hue[1]}66 65%, #0e0d0c 100%)`,
         }}
       >
-        <Image
-          src={item.image}
-          alt={item.name}
-          fill
+        <DishImage
+          item={item}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
-          className="tg-card-zoom object-cover"
+          className="tg-card-zoom"
         />
         {item.signature && (
           <span className="absolute top-3 left-3 z-10 rounded-full bg-tg-orange/95 px-3 py-1 font-display uppercase tracking-[0.2em] text-[10px] text-tg-black">

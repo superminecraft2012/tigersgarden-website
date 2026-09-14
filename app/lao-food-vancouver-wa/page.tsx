@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { DishImage } from "@/components/DishImage";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
 import { Reveal } from "@/components/Reveal";
@@ -142,12 +142,10 @@ export default function LaoFoodPage() {
                       background: `radial-gradient(120% 90% at 30% 20%, ${item.hue[0]}33 0%, ${item.hue[1]}66 65%, #0e0d0c 100%)`,
                     }}
                   >
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
+                    <DishImage
+                      item={item}
                       sizes="(max-width: 640px) 100vw, 33vw"
-                      className="tg-card-zoom object-cover"
+                      className="tg-card-zoom"
                     />
                   </div>
                   <h2 className="font-display uppercase tracking-[-0.01em] text-2xl text-tg-black group-hover:text-tg-orange transition-colors">

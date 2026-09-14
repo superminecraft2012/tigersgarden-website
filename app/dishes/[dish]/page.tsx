@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { DishImage } from "@/components/DishImage";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
 import { SectionTitle } from "@/components/SectionTitle";
@@ -96,13 +96,10 @@ export default async function DishPage({
                   background: `radial-gradient(120% 90% at 30% 20%, ${item.hue[0]}33 0%, ${item.hue[1]}66 65%, #0e0d0c 100%)`,
                 }}
               >
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  fill
-                  priority
+                <DishImage
+                  item={item}
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  preload
                 />
               </div>
             </div>

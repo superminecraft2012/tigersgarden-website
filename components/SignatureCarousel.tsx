@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import { DishImage } from "./DishImage";
 import Link from "next/link";
 import type { MenuItem } from "@/lib/menu";
 import { site } from "@/lib/site";
@@ -52,12 +52,10 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
                 <div className="flex h-[240px] sm:h-[280px] md:h-[320px]">
                   {/* Food image, left 42% */}
                   <div className="relative w-[42%] shrink-0 overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
+                    <DishImage
+                      item={item}
                       sizes="(max-width: 768px) 37vw, 310px"
-                      className={`object-cover object-center transition-transform duration-700 ${
+                      className={`object-center transition-transform duration-700 ${
                         isActive ? "scale-100" : "scale-[1.06]"
                       }`}
                     />
