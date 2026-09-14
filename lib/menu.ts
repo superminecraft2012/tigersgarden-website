@@ -63,7 +63,7 @@ export const menu: MenuItem[] = [
     short: "Crispy rolls stuffed with vegetables and glass noodles.",
     description:
       "Golden, hand-rolled crispy egg rolls filled with shredded vegetables and glass noodles. Served with house sweet-chili dipping sauce.",
-    image: "/images/menu/appetizers/a1-egg-rolls.png",
+    image: "/images/menu/appetizers/a1-egg-rolls.webp",
     spice: 0,
     vegetarianAvailable: true,
     hue: ["#f4b042", "#5a2d08"],
@@ -145,7 +145,7 @@ export const menu: MenuItem[] = [
     short: "Skewered chicken in turmeric marinade, peanut sauce.",
     description:
       "Tender chicken skewers marinated in turmeric, coconut, and lemongrass, then grilled. Served with peanut sauce and cucumber relish.",
-    image: "/images/menu/appetizers/a8-chicken-satay.png",
+    image: "/images/menu/appetizers/a8-chicken-satay.webp",
     spice: 1,
     hue: ["#e8b14a", "#5a3208"],
   },
@@ -203,7 +203,7 @@ export const menu: MenuItem[] = [
     short: "Lemongrass, lime, chili, mushroom, shrimp.",
     description:
       "Hot-and-sour Thai broth with lemongrass, galangal, kaffir lime leaves, mushrooms, and shrimp. Bright, herbal, and aromatic.",
-    image: "/images/menu/soups/d20-tom-yum-soup.png",
+    image: "/images/menu/soups/d20-tom-yum-soup.webp",
     spice: 2,
     glutenFreeAvailable: true,
     hue: ["#f25a1c", "#3a1208"],
@@ -216,7 +216,7 @@ export const menu: MenuItem[] = [
     short: "Coconut milk, galangal, lemongrass, chicken.",
     description:
       "Creamy coconut-milk soup with galangal, lemongrass, lime, and chicken. The mild, milky cousin of tom yum.",
-    image: "/images/menu/soups/d21-tom-kha-soup.png",
+    image: "/images/menu/soups/d21-tom-kha-soup.webp",
     spice: 1,
     glutenFreeAvailable: true,
     signature: true,
@@ -230,7 +230,7 @@ export const menu: MenuItem[] = [
     short: "Chicken wontons, carrots, cabbage, chicken broth.",
     description:
       "Chicken wontons with carrots, green and white onions, and cabbage in chicken broth.",
-    image: "/images/menu/soups/d22-wonton-soup.png",
+    image: "/images/menu/soups/d22-wonton-soup.webp",
     spice: 0,
     hue: ["#f4e9d6", "#5a3208"],
   },
@@ -243,7 +243,7 @@ export const menu: MenuItem[] = [
     short: "Ground chicken with spicy lime juice over spring mix.",
     description:
       "Ground chicken tossed with spicy lime juice, served over spring mix.",
-    image: "/images/menu/salads/d30-larb.png",
+    image: "/images/menu/salads/d30-larb.webp",
     spice: 2,
     signature: true,
     glutenFreeAvailable: true,
@@ -280,7 +280,7 @@ export const menu: MenuItem[] = [
     short: "Grilled beef, lime, chili, herbs.",
     description:
       "Sliced grilled beef tossed warm with lime, chili, fish sauce, red onion, cucumber, and fresh herbs.",
-    image: "/images/menu/salads/d33-beef-salad.png",
+    image: "/images/menu/salads/d33-beef-salad.webp",
     spice: 2,
     glutenFreeAvailable: true,
     hue: ["#c43e0a", "#2a0a02"],
@@ -306,7 +306,7 @@ export const menu: MenuItem[] = [
     short: "Wok-tossed garden vegetables, light garlic sauce.",
     description:
       "Broccoli, carrot, snow pea, mushroom, baby corn, and napa cabbage tossed in a light garlic-oyster sauce.",
-    image: "/images/menu/stir-fries/d40-mixed-vegetables.png",
+    image: "/images/menu/stir-fries/d40-mixed-vegetables.webp",
     spice: 0,
     vegetarianAvailable: true,
     hue: ["#7ea35a", "#1f3a10"],
@@ -330,7 +330,7 @@ export const menu: MenuItem[] = [
     short: "Cashew, bell pepper, carrot, sweet chili jam, water chestnut.",
     description:
       "Wok-fried cashew, bell pepper, carrot, sweet chili jam, garlic, onion, water chestnut, and bamboo shoot.",
-    image: "/images/menu/stir-fries/d42-cashew-nut.png",
+    image: "/images/menu/stir-fries/d42-cashew-nut.webp",
     spice: 1,
     signature: true,
     hue: ["#e8b14a", "#5a3208"],
@@ -355,7 +355,7 @@ export const menu: MenuItem[] = [
     short: "Thai eggplant, basil, garlic, sweet chili jam.",
     description:
       "Wok-fried eggplant, garlic, basil, onion, sweet chili jam, and bell pepper.",
-    image: "/images/menu/stir-fries/d44-eggplant.png",
+    image: "/images/menu/stir-fries/d44-eggplant.webp",
     spice: 1,
     vegetarianAvailable: true,
     hue: ["#6a3a8a", "#1f1030"],
@@ -367,7 +367,7 @@ export const menu: MenuItem[] = [
     short: "Steamed broccoli, carrot, cabbage, peanut sauce.",
     description:
       "Steamed broccoli, carrot, and cabbage topped with peanut sauce.",
-    image: "/images/menu/stir-fries/d45-showering-rama.png",
+    image: "/images/menu/stir-fries/d45-showering-rama.webp",
     spice: 0,
     hue: ["#7ea35a", "#1f3a10"],
   },
@@ -393,7 +393,7 @@ export const menu: MenuItem[] = [
     short: "Mild yellow curry, potato, carrot, coconut milk.",
     description:
       "A mild, golden curry made with house yellow curry paste, coconut milk, potato, carrot, and onion. The gentlest of the curries.",
-    image: "/images/menu/curry/d50-yellow-curry.png",
+    image: "/images/menu/curry/d50-yellow-curry.webp",
     spice: 1,
     glutenFreeAvailable: true,
     hue: ["#e8b14a", "#5a3208"],
@@ -417,7 +417,7 @@ export const menu: MenuItem[] = [
     short: "Thick coconut curry, kaffir lime, peanut.",
     description:
       "Thick, fragrant panang curry with coconut cream, kaffir lime leaf, basil, and a hint of peanut. Less liquid, more lacquer.",
-    image: "/images/menu/curry/d52-panang-curry.png",
+    image: "/images/menu/curry/d52-panang-curry.webp",
     spice: 2,
     glutenFreeAvailable: true,
     hue: ["#c43e0a", "#2a0a02"],
@@ -469,7 +469,7 @@ export const menu: MenuItem[] = [
     short: "Red curry, fresh pineapple, basil, bell pepper.",
     description:
       "Red curry brightened with fresh pineapple, bell pepper, and basil, a sunny, fruity counter to the heat.",
-    image: "/images/menu/curry/d56-pineapple-curry.png",
+    image: "/images/menu/curry/d56-pineapple-curry.webp",
     spice: 2,
     glutenFreeAvailable: true,
     hue: ["#f4b042", "#5a2208"],
@@ -483,7 +483,7 @@ export const menu: MenuItem[] = [
     short: "Rice noodles, tamarind, peanut, bean sprout, egg.",
     description:
       "Our most-ordered dish. Stir-fried rice noodles with tamarind, fish sauce, palm sugar, egg, bean sprout, scallion, and crushed peanut. Bright, balanced, and the way we make it.",
-    image: "/images/menu/noodle/d80-pad-thai.png",
+    image: "/images/menu/noodle/d80-pad-thai.webp",
     spice: 1,
     signature: true,
     hue: ["#f4b042", "#5a3208"],
@@ -544,7 +544,7 @@ export const menu: MenuItem[] = [
     short: "House fried rice, egg, scallion, your choice of protein.",
     description:
       "Our house fried rice, jasmine rice stir-fried with egg, onion, scallion, tomato, and your choice of protein. Smoky, simple, classic.",
-    image: "/images/menu/fried-rice/d90-tigers-fried-rice.png",
+    image: "/images/menu/fried-rice/d90-tigers-fried-rice.webp",
     spice: 0,
     hue: ["#f4b042", "#5a3208"],
   },
@@ -568,7 +568,7 @@ export const menu: MenuItem[] = [
     short: "Fried rice with holy basil, chili, garlic.",
     description:
       "Fried rice stir-fried hot and fast with holy basil, fresh chili, garlic, bell pepper, and onion.",
-    image: "/images/menu/fried-rice/d92-hot-basil-fried-rice.png",
+    image: "/images/menu/fried-rice/d92-hot-basil-fried-rice.webp",
     spice: 3,
     hue: ["#c43e0a", "#1f3010"],
   },
@@ -651,7 +651,7 @@ export const menu: MenuItem[] = [
     short: "Strong Thai coffee, condensed milk, over ice.",
     description:
       "Strong Thai-style coffee sweetened with condensed milk and poured over ice.",
-    image: "/images/menu/beverages/thai-ice-coffee.png",
+    image: "/images/menu/beverages/thai-ice-coffee.webp",
     hue: ["#8a5a10", "#2a1208"],
   },
   {
@@ -770,7 +770,7 @@ export const menu: MenuItem[] = [
     category: "Beverages",
     short: "Mango juice.",
     description: "Mango juice.",
-    image: "/images/menu/beverages/mango-juice.png",
+    image: "/images/menu/beverages/mango-juice.webp",
     hue: ["#f4b042", "#5a2d08"],
   },
 
