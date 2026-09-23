@@ -84,7 +84,7 @@ export function HappyHourPopup() {
           <p className="mt-5 font-display text-xs uppercase tracking-[0.25em] text-tg-orange">Every day</p>
           <h2 id="happy-hour-title" className="mt-2 font-display text-5xl uppercase leading-none text-tg-cream-soft">Happy Hour</h2>
           <div className="mx-auto my-5 h-[2px] w-12 bg-tg-orange" aria-hidden="true" />
-          <p id="happy-hour-schedule" className="font-serif text-3xl italic text-tg-cream-soft">4:30–6:30 PM</p>
+          <p id="happy-hour-schedule" className="font-display text-3xl not-italic text-tg-cream-soft">4:30–6:30 PM</p>
           <p className="mt-3 text-sm text-tg-cream/65">Join us at Tiger&rsquo;s Garden.</p>
           <a href="/menu" className="mt-7 inline-flex min-h-11 w-full items-center justify-center rounded-full bg-tg-orange px-5 font-display text-sm uppercase tracking-[0.16em] text-tg-black hover:bg-tg-ember focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tg-orange">View Menu</a>
           <button type="button" onClick={() => setOpen(false)} className="mt-3 inline-flex min-h-11 w-full items-center justify-center rounded-full border border-tg-cream/20 font-display text-sm uppercase tracking-[0.16em] text-tg-cream hover:border-tg-cream/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tg-orange">Continue to Site</button>
