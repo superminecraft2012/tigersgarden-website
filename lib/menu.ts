@@ -294,7 +294,6 @@ export const menu: MenuItem[] = [
     short: "Wok-tossed garden vegetables, light garlic sauce.",
     description:
       "Broccoli, carrot, snow pea, mushroom, baby corn, and napa cabbage tossed in a light garlic-oyster sauce.",
-    image: "/images/menu/stir-fries/d40-mixed-vegetables.webp",
     spice: 0,
     vegetarianAvailable: true,
     hue: ["#7ea35a", "#1f3a10"],
@@ -365,6 +364,7 @@ export const menu: MenuItem[] = [
     short: "Holy basil, chili, garlic, bell pepper.",
     description:
       "Holy basil, fresh chili, garlic, bell pepper, and onion stir-fried fast and hot. A Thai street-food classic.",
+    image: "/images/menu/stir-fries/d46-hot-basil.webp",
     spice: 3,
     signature: true,
     hue: ["#c43e0a", "#1f3010"],
@@ -439,6 +439,7 @@ export const menu: MenuItem[] = [
     short: "Roasted pumpkin in red curry, basil.",
     description:
       "Sweet kabocha pumpkin simmered in red curry with coconut milk, basil, and bell pepper. Round, sweet, and warming.",
+    image: "/images/menu/curry/d55-pumpkin-curry.webp",
     spice: 2,
     glutenFreeAvailable: true,
     hue: ["#f4b042", "#5a2d08"],
@@ -450,7 +451,6 @@ export const menu: MenuItem[] = [
     short: "Red curry, fresh pineapple, basil, bell pepper.",
     description:
       "Red curry brightened with fresh pineapple, bell pepper, and basil, a sunny, fruity counter to the heat.",
-    image: "/images/menu/curry/d56-pineapple-curry.webp",
     spice: 2,
     glutenFreeAvailable: true,
     hue: ["#f4b042", "#5a2208"],
@@ -521,7 +521,6 @@ export const menu: MenuItem[] = [
     short: "House fried rice, egg, scallion, your choice of protein.",
     description:
       "Our house fried rice, jasmine rice stir-fried with egg, onion, scallion, tomato, and your choice of protein. Smoky, simple, classic.",
-    image: "/images/menu/fried-rice/d90-tigers-fried-rice.webp",
     spice: 0,
     hue: ["#f4b042", "#5a3208"],
   },
@@ -532,6 +531,7 @@ export const menu: MenuItem[] = [
     short: "Fried rice, pineapple, cashew, raisin, curry powder.",
     description:
       "Fried rice with fresh pineapple, roasted cashew, raisin, and a whisper of curry powder. Sweet, savory, and a guest favorite.",
+    image: "/images/menu/fried-rice/d91-pineapple-cashew-fried-rice.webp",
     spice: 0,
     signature: true,
     hue: ["#f4b042", "#5a2208"],
@@ -621,7 +621,6 @@ export const menu: MenuItem[] = [
     short: "Strong Thai coffee, condensed milk, over ice.",
     description:
       "Strong Thai-style coffee sweetened with condensed milk and poured over ice.",
-    image: "/images/menu/beverages/thai-ice-coffee.webp",
     hue: ["#8a5a10", "#2a1208"],
   },
   {
@@ -696,6 +695,7 @@ export const menu: MenuItem[] = [
     short: "Classic Thai iced tea with condensed milk.",
     description:
       "Classic Thai iced tea with condensed milk.",
+    image: "/images/menu/beverages/thai-iced-tea.webp",
     hue: ["#f4b042", "#5a2208"],
   },
   {
