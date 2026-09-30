@@ -30,7 +30,7 @@ const FAQ = [
   },
   {
     q: "What are the last hours to place a takeout order?",
-    a: "Carryout and delivery close before the dining room does. Monday to Thursday and Sunday the kitchen takes orders until 8:45 pm, and Friday and Saturday until 9:15 pm.",
+    a: "Carryout and delivery close before the dining room does. Monday to Friday the kitchen takes lunch orders until 2:45 pm and reopens at 4 pm. Evening orders close at 8:45 pm Monday to Thursday and 9:15 pm Friday to Sunday.",
   },
   {
     q: "Can I order Thai food online for pickup in downtown Vancouver?",

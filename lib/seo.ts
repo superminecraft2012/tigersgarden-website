@@ -68,16 +68,21 @@ export function openingHoursSpecification() {
 
   for (const row of primary.hours.business) {
     const days = expandDays(row.days);
-    const [rawOpen, rawClose] = row.time.split(/\s*[–—-]\s*/);
-    const opens = rawOpen ? to24h(rawOpen) : null;
-    const closes = rawClose ? to24h(rawClose) : null;
-    if (!days.length || !opens || !closes) continue;
-    out.push({
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: days,
-      opens,
-      closes,
-    });
+    if (!days.length) continue;
+    // A row may hold several periods, e.g. a lunch/dinner split:
+    // "11:00 am – 3:00 pm, 4:00 pm – 9:00 pm"
+    for (const period of row.time.split(/\s*,\s*/)) {
+      const [rawOpen, rawClose] = period.split(/\s*[–—-]\s*/);
+      const opens = rawOpen ? to24h(rawOpen) : null;
+      const closes = rawClose ? to24h(rawClose) : null;
+      if (!opens || !closes) continue;
+      out.push({
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: days,
+        opens,
+        closes,
+      });
+    }
   }
   return out;
 }

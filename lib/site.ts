@@ -55,19 +55,19 @@ export const locations: Location[] = [
       "https://maps.google.com/?daddr=45.6273812310682,-122.674576899983",
     hours: {
       business: [
-        { days: "Mon – Thu", time: "11:00 am – 9:00 pm" },
-        { days: "Fri & Sat", time: "11:00 am – 9:30 pm" },
-        { days: "Sun", time: "11:00 am – 9:00 pm" },
+        { days: "Mon – Thu", time: "11:00 am – 3:00 pm, 4:00 pm – 9:00 pm" },
+        { days: "Fri", time: "11:00 am – 3:00 pm, 4:00 pm – 9:30 pm" },
+        { days: "Sat & Sun", time: "12:00 pm – 9:30 pm" },
       ],
       carryout: [
-        { days: "Mon – Thu", time: "11:00 am – 8:45 pm" },
-        { days: "Fri & Sat", time: "11:00 am – 9:15 pm" },
-        { days: "Sun", time: "11:00 am – 8:45 pm" },
+        { days: "Mon – Thu", time: "11:00 am – 2:45 pm, 4:00 pm – 8:45 pm" },
+        { days: "Fri", time: "11:00 am – 2:45 pm, 4:00 pm – 9:15 pm" },
+        { days: "Sat & Sun", time: "12:00 pm – 9:15 pm" },
       ],
       delivery: [
-        { days: "Mon – Thu", time: "11:00 am – 8:45 pm" },
-        { days: "Fri & Sat", time: "11:00 am – 9:15 pm" },
-        { days: "Sun", time: "11:00 am – 8:45 pm" },
+        { days: "Mon – Thu", time: "11:00 am – 2:45 pm, 4:00 pm – 8:45 pm" },
+        { days: "Fri", time: "11:00 am – 2:45 pm, 4:00 pm – 9:15 pm" },
+        { days: "Sat & Sun", time: "12:00 pm – 9:15 pm" },
       ],
     },
   },

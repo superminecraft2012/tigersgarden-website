@@ -149,7 +149,7 @@ export default function MenuPage() {
             <Reveal delay={0.15}>
               <p className="max-w-xl text-tg-cream/70 leading-relaxed">
                 Order online for pickup or delivery, or call ahead to reserve a
-                table. We're open daily from 11am.
+                table. We're open daily for lunch and dinner.
               </p>
             </Reveal>
             <Reveal delay={0.3}>
