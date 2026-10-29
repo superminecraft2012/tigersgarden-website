@@ -176,7 +176,7 @@ export default async function MenuItemPage({
                         <span className="text-tg-cream/80">{n}</span>
                       </span>
                     ))}
-                    . It is the same dish &mdash; {item.name} is how we list it.
+                    . It is the same dish. {item.name} is how we list it.
                   </p>
                 </Reveal>
               )}

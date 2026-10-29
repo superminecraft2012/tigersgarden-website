@@ -140,20 +140,15 @@ export function Footer() {
               </li>
             ))}
             <li>
-              <Link
-                href="/lao-food-vancouver-wa"
-                className="tg-tap tg-link text-tg-cream/70 hover:text-tg-cream text-sm"
-              >
-                Lao Food in Vancouver, WA
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/order-online"
+              <a
+                href={site.orderUrl}
+                data-track="order_click"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="tg-tap tg-link text-tg-cream/70 hover:text-tg-cream text-sm"
               >
                 Order Thai Takeout &amp; Delivery in Vancouver, WA
-              </Link>
+              </a>
             </li>
             <li>
               <Link

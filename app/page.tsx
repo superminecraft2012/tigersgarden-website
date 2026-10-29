@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const features = [
   {
     label: "Family Recipes",
-    desc: "The dishes this place was built on, cooked the same way they've always been — and getting better every year.",
+    desc: "The dishes this place was built on, cooked the same way they've always been, and getting better every year.",
     icon: (
       <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="m2 4 3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14" />
@@ -62,14 +62,12 @@ const features = [
 
 const cuisineDishes: Record<string, string[]> = {
   Thai: ["Tom Yum", "Pad Thai", "Red Curry", "Massaman"],
-  Laotian: ["Larb", "Papaya Salad", "Sticky Rice", "Tom Kha"],
 };
 
 export default function HomePage() {
   const favorites = getCustomerFavorites();
   const signatures = getSignatures();
   const thai = aboutCuisine.find((c) => c.name === "Thai");
-  const laotian = aboutCuisine.find((c) => c.name === "Laotian");
 
   return (
     <>
@@ -116,7 +114,7 @@ export default function HomePage() {
                 className="font-serif italic text-[clamp(1.5rem,4vw,3rem)] text-tg-orange leading-tight opacity-0 [animation:var(--animate-fade-up)]"
                 style={{ animationDelay: "0.25s" }}
               >
-                Thai &amp; Laotian Restaurant in Vancouver, WA
+                Thai Restaurant in Vancouver, WA
               </span>
             </h1>
 
@@ -146,7 +144,6 @@ export default function HomePage() {
       <Marquee
         items={[
           "Thai",
-          "Laotian",
           "Cocktail Lounge",
           "Catering",
           "Downtown Vancouver",
@@ -170,7 +167,7 @@ export default function HomePage() {
                 </SectionTitle>
                 <p className="mt-6 max-w-lg text-base md:text-lg leading-relaxed text-tg-black/70">
                   Tiger&rsquo;s Garden has been part of downtown Vancouver
-                  for years — and the food has never been better than it is
+                  for years, and the food has never been better than it is
                   right now. Same family recipes, new flavors on the menu,
                   and a kitchen that keeps getting sharper.
                 </p>
@@ -327,24 +324,24 @@ export default function HomePage() {
       <section className="bg-white py-24 md:py-32">
         <Container>
           <Reveal>
-            <SectionTitle eyebrow="Two cuisines, one table" align="center" tone="black">
-              Thai &amp; Laotian, <br />
+            <SectionTitle eyebrow="Our kitchen" align="center" tone="black">
+              Thai, <br />
               <span className="font-serif italic normal-case tracking-normal text-tg-orange">
-                side by side.
+                from our family&rsquo;s kitchen.
               </span>
             </SectionTitle>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p className="mx-auto mt-8 max-w-2xl text-center text-base md:text-lg text-tg-black/65 leading-relaxed">
-              We grew up cooking both, and we&rsquo;ve been perfecting
-              them ever since. Thai built on fresh chili, kaffir lime, and
-              basil. Laotian the way it should be: sharp, citrusy, herb-led.
+              We grew up cooking it, and we&rsquo;ve been perfecting
+              it ever since. Thai built on fresh chili, kaffir lime, and
+              basil.
             </p>
           </Reveal>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
-            {[thai, laotian].map((c, i) =>
+          <div className="mx-auto mt-16 grid max-w-xl gap-8">
+            {[thai].map((c, i) =>
               c ? (
                 <Reveal
                   key={c.name}
@@ -501,7 +498,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={0.2}>
               <p className="max-w-xl text-tg-cream/75 leading-relaxed">
-                Order online for pickup or delivery, or call ahead — we
+                Order online for pickup or delivery, or call ahead. We
                 keep tables open for walk-ins too.
               </p>
             </Reveal>

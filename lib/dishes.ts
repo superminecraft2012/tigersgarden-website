@@ -49,7 +49,7 @@ export const dishes: Dish[] = [
     label: "Pad Thai",
     title: "Best Pad Thai in Vancouver, WA",
     metaDescription:
-      "Pad Thai at Tiger's Garden in downtown Vancouver, WA — stir-fried rice noodles with tamarind, egg, bean sprout and crushed peanut. Dine in, carry out or order online.",
+      "Pad Thai at Tiger's Garden in downtown Vancouver, WA: stir-fried rice noodles with tamarind, egg, bean sprout and crushed peanut. Dine in, carry out or order online.",
     alsoKnownAs: ["phat thai", "pad thai noodles"],
     background: [
       "Pad Thai is a stir-fried rice noodle dish and one of the most widely recognised dishes in Thai cooking. It rose to national prominence in Thailand in the mid-20th century and has since become the dish most people outside the country meet first.",
@@ -70,7 +70,7 @@ export const dishes: Dish[] = [
       },
       {
         q: "What does \"pad\" mean in Pad Thai?",
-        a: "Pad means stir-fried in Thai, so the name describes the cooking method — a Thai stir-fry of rice noodles.",
+        a: "Pad means stir-fried in Thai, so the name describes the cooking method: a Thai stir-fry of rice noodles.",
       },
       {
         q: "What is the difference between Pad Thai and drunken noodles?",
@@ -86,7 +86,7 @@ export const dishes: Dish[] = [
     label: "Tom Yum Soup",
     title: "Best Tom Yum Soup in Vancouver, WA",
     metaDescription:
-      "Tom Yum soup at Tiger's Garden in downtown Vancouver, WA — a hot-and-sour Thai broth with lemongrass, galangal, kaffir lime leaves, mushrooms and shrimp.",
+      "Tom Yum soup at Tiger's Garden in downtown Vancouver, WA: a hot-and-sour Thai broth with lemongrass, galangal, kaffir lime leaves, mushrooms and shrimp.",
     alsoKnownAs: ["tom yum goong", "tom yum gung", "hot and sour Thai soup"],
     background: [
       "Tom yum is a hot-and-sour soup from Thailand built on aromatics rather than stock alone. Lemongrass, galangal and kaffir lime leaves are simmered to release their oils, then lime juice and chili are added toward the end so the sourness and heat stay bright.",
@@ -119,10 +119,10 @@ export const dishes: Dish[] = [
     label: "Massaman Curry",
     title: "Best Massaman Curry in Vancouver, WA",
     metaDescription:
-      "Massaman curry at Tiger's Garden in downtown Vancouver, WA — slow-simmered with potato, onion, roasted peanut and a tamarind-led finish.",
+      "Massaman curry at Tiger's Garden in downtown Vancouver, WA: slow-simmered with potato, onion, roasted peanut and a tamarind-led finish.",
     alsoKnownAs: ["matsaman curry", "mussaman curry"],
     background: [
-      "Massaman is the mildest and most warmly spiced of the Thai curries, and the one that most clearly shows outside influence. Where other Thai curry pastes lean on fresh herbs, massaman brings in dry spices associated with Persian and Indian cooking — cinnamon, cardamom, clove and cumin among them.",
+      "Massaman is the mildest and most warmly spiced of the Thai curries, and the one that most clearly shows outside influence. Where other Thai curry pastes lean on fresh herbs, massaman brings in dry spices associated with Persian and Indian cooking: cinnamon, cardamom, clove and cumin among them.",
       "It is also the slowest. Massaman is simmered rather than flashed, which is what lets potato and onion soften into the sauce and gives the curry its thicker, rounder body.",
     ],
     faq: [
@@ -156,24 +156,24 @@ export const dishes: Dish[] = [
     label: "Larb",
     title: "Best Larb in Vancouver, WA",
     metaDescription:
-      "Larb at Tiger's Garden in downtown Vancouver, WA — ground chicken tossed with spicy lime juice over spring mix. Laotian and Thai cooking, facing Esther Short Park.",
+      "Larb at Tiger's Garden in downtown Vancouver, WA: ground chicken tossed with spicy lime juice over spring mix. Thai cooking, facing Esther Short Park.",
     alsoKnownAs: ["laab", "larp", "lahb"],
     background: [
-      "Larb is a minced meat salad and is widely regarded as the national dish of Laos. It is also eaten across Isan, the northeastern region of Thailand that shares a border and much of its cooking with Laos, which is why it appears on both Thai and Laotian menus.",
+      "Larb is a minced meat salad eaten across Isan, the northeastern region of Thailand.",
       "Rather than a leafy salad with meat added, larb is the reverse: the meat is the salad. It is dressed with lime juice and chili and served at room temperature, so the sourness stays sharp instead of cooking off.",
     ],
     faq: [
       {
         q: "What is larb?",
-        a: "Larb is a minced meat salad widely regarded as the national dish of Laos, dressed with lime juice and chili. At Tiger's Garden it is ground chicken tossed with spicy lime juice, served over spring mix.",
+        a: "Larb is a minced meat salad dressed with lime juice and chili. At Tiger's Garden it is ground chicken tossed with spicy lime juice, served over spring mix.",
       },
       {
         q: "Is larb the same as laab or larp?",
         a: "Yes. Laab, larp and lahb are alternative spellings of the same dish. The menu spells it Larb.",
       },
       {
-        q: "Where can I get Laotian food in Vancouver, WA?",
-        a: "Tiger's Garden serves Thai and Laotian cuisine at 312 W 8th St in downtown Vancouver, WA, facing Esther Short Park.",
+        q: "Where can I get larb in Vancouver, WA?",
+        a: "Tiger's Garden serves larb at 312 W 8th St in downtown Vancouver, WA, facing Esther Short Park.",
       },
       {
         q: "What is larb gai?",
@@ -189,7 +189,7 @@ export const dishes: Dish[] = [
     label: "Mango Sticky Rice",
     title: "Best Mango Sticky Rice in Vancouver, WA",
     metaDescription:
-      "Mango sticky rice at Tiger's Garden in downtown Vancouver, WA — sweet coconut-soaked sticky rice with fresh mango and a drizzle of coconut cream.",
+      "Mango sticky rice at Tiger's Garden in downtown Vancouver, WA: sweet coconut-soaked sticky rice with fresh mango and a drizzle of coconut cream.",
     alsoKnownAs: ["khao niaow ma muang", "mango with sticky rice", "sweet sticky rice with mango"],
     background: [
       "Mango sticky rice is a Thai dessert built on glutinous rice, a short-grain rice that turns dense and chewy when steamed rather than boiled. The cooked rice is soaked in sweetened coconut milk while still warm so it absorbs the coconut rather than being coated in it.",
@@ -210,7 +210,7 @@ export const dishes: Dish[] = [
       },
       {
         q: "What does mango sticky rice taste like?",
-        a: "Sweet and creamy rather than spiced. The menu describes sweet coconut-soaked sticky rice with fresh mango and a drizzle of coconut cream — the rice is chewy and the mango soft.",
+        a: "Sweet and creamy rather than spiced. The menu describes sweet coconut-soaked sticky rice with fresh mango and a drizzle of coconut cream. The rice is chewy and the mango soft.",
       },
     ],
     related: ["pad-thai", "massaman-curry", "larb"],

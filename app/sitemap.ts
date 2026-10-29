@@ -15,11 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/menu", priority: 0.9, changeFrequency: "weekly" as const },
     { path: "/dishes", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/order-online", priority: 0.8, changeFrequency: "monthly" as const },
-    {
-      path: "/lao-food-vancouver-wa",
-      priority: 0.8,
-      changeFrequency: "monthly" as const,
-    },
     { path: "/about", priority: 0.6, changeFrequency: "monthly" as const },
     { path: "/catering", priority: 0.6, changeFrequency: "monthly" as const },
     { path: "/contact", priority: 0.7, changeFrequency: "monthly" as const },

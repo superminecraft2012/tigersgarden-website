@@ -29,7 +29,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: `Thai & Laotian Restaurant in Vancouver, WA · ${site.name}`,
+    default: `Thai Restaurant in Vancouver, WA · ${site.name}`,
     template: `%s · ${site.name}`,
   },
   description: site.description,

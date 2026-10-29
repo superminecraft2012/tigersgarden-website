@@ -125,7 +125,7 @@ export default async function DishPage({
                     <em className="not-italic text-tg-cream/70">{n}</em>
                   </span>
                 ))}
-                . These are the same dish — the menu lists it as {item.name}.
+                . These are the same dish. The menu lists it as {item.name}.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2">

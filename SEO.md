@@ -69,16 +69,14 @@ intent those autocompletes express.
   me` is its #3 suggestion) but had the weakest demand of the six, well under
   the 62,964 of the next lowest. Dropped to keep the set tight.
   `/dishes/papaya-salad` permanently redirects to `/menu/papaya-salad`; the
-  dish keeps its menu page and its billing on `/lao-food-vancouver-wa`.
+  dish keeps its menu page.
 - **Fried Tofu, Pot Stickers, Tempura, Wonton Soup, Yakisoba, Egg Rolls,
   Orange Chicken, Crab Rangoon, Fried Calamari** — pan-cuisine inflation. Tofu
   shows 459,023 views because the article is the generic *Tofu* page; jiaozi,
   tempura and wonton traffic is Chinese/Japanese and will not convert here.
 
-**Local market.** `lao food vancouver wa` and `lao restaurant vancouver wa`
-both autocomplete, and Google rewrites "laotian" → "lao". Named Thai
-competitors in market: Thai Orchid, Kindee Thai, Arawan Thai. The Laotian half
-of the menu is the genuine differentiator.
+**Local market.** Named Thai competitors in market: Thai Orchid, Kindee Thai,
+Arawan Thai.
 
 ---
 
@@ -217,7 +215,6 @@ of them a page intended to compete.
   to a server component that renders every section. Category tabs became
   anchor links into those sections.
 - `app/dishes/` — hub plus five `[dish]` pages.
-- `app/lao-food-vancouver-wa/` — the single cuisine-category-city page.
 - `components/Footer.tsx` — "Popular Dishes" block with descriptive anchors.
 - `app/order-online/` — pickup/delivery page built on the genuinely verified
   fact that carryout and delivery close 15 minutes before the dining room.
@@ -236,8 +233,8 @@ of them a page intended to compete.
 ## What was deliberately NOT built
 
 - **No city or neighbourhood grid.** One location, so no
-  `/thai-food-<nearby-city>` permutations. Exactly one cuisine-category-city
-  page, justified by the menu having a genuinely distinctive Laotian section.
+  `/thai-food-<nearby-city>` permutations. No cuisine-category-city
+  page.
 - **No `Offer` or price markup anywhere** — no verified price source exists.
 - **No `AggregateRating` or `Review` markup.** The quotes in `lib/reviews.ts`
   are self-hosted and self-selected; marking them up is the self-serving

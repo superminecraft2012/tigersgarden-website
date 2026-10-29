@@ -115,7 +115,7 @@ export function HolidayToast() {
 
               {/* Body */}
               <p className="mt-5 text-center text-[0.8rem] leading-relaxed text-tg-cream/45">
-                Thai and Laotian cuisine with a full cocktail lounge, right in downtown Vancouver facing Esther Short Park.
+                Thai cuisine with a full cocktail lounge, right in downtown Vancouver facing Esther Short Park.
               </p>
 
               {/* CTAs */}

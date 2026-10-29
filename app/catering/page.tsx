@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 const eventTypes = [
   {
     title: "Office Lunches",
-    body: "Feed your team something better than a sandwich tray. We put together generous spreads of Thai and Laotian classics, portioned and packaged for easy service.",
+    body: "Feed your team something better than a sandwich tray. We put together generous spreads of Thai classics, portioned and packaged for easy service.",
   },
   {
     title: "Family Gatherings",
-    body: "Birthdays, reunions, holidays — we handle the cooking so you can actually enjoy the party. Mix and match dishes from across the menu.",
+    body: "Birthdays, reunions, holidays: we handle the cooking so you can actually enjoy the party. Mix and match dishes from across the menu.",
   },
   {
     title: "Rehearsal Dinners",
@@ -102,7 +102,7 @@ export default function CateringPage() {
               className="max-w-xl text-tg-cream/80 leading-relaxed text-lg opacity-0 [animation:var(--animate-fade-up)]"
               style={{ animationDelay: "0.22s" }}
             >
-              Thai &amp; Laotian food for your office, family, or event.
+              Thai food for your office, family, or event.
               We cook, you celebrate.
             </p>
 
@@ -142,7 +142,7 @@ export default function CateringPage() {
               <p className="text-base md:text-lg leading-relaxed text-tg-black/70 max-w-lg">
                 Tiger&rsquo;s Garden has been feeding Vancouver for years,
                 and the menu has never been stronger. Whether it&rsquo;s twelve people or a
-                hundred, Thai and Laotian food travels well and makes an
+                hundred, Thai food travels well and makes an
                 impression.
               </p>
               <p className="text-base leading-relaxed text-tg-black/60 max-w-lg">

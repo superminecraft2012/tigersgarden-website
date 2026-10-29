@@ -16,6 +16,13 @@ const nextConfig: NextConfig = {
       // /dishes/papaya-salad was retired — it had the weakest demand of the
       // shortlist. The dish still exists, so the URL points at its menu page
       // rather than 404ing on a link that was already live.
+      // The standalone cuisine landing page was retired; keep its old URL
+      // working by sending it to the menu.
+      {
+        source: "/lao-food-vancouver-wa",
+        destination: "/menu",
+        permanent: true,
+      },
       {
         source: "/dishes/papaya-salad",
         destination: "/menu/papaya-salad",

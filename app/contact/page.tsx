@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: canonical("/contact") },
   title: "Visit Us",
   description:
-    "Tiger's Garden, Thai & Laotian cuisine at 312 W 8th St, Vancouver, WA. Walk-ins welcome, reservations recommended for parties larger than five.",
+    "Tiger's Garden, Thai cuisine at 312 W 8th St, Vancouver, WA. Walk-ins welcome, reservations recommended for parties larger than five.",
 };
 
 const faqs = [

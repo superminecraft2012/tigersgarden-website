@@ -10,7 +10,7 @@ import { canonical, graph, breadcrumbs, faqNode, restaurantRef } from "@/lib/seo
 export const metadata: Metadata = {
   title: "Order Thai Takeout & Delivery in Vancouver",
   description:
-    "Order Thai and Laotian food for pickup or delivery from Tiger's Garden, 312 W 8th St in downtown Vancouver, WA. Carryout and delivery hours, and how to order.",
+    "Order Thai food for pickup or delivery from Tiger's Garden, 312 W 8th St in downtown Vancouver, WA. Carryout and delivery hours, and how to order.",
   alternates: { canonical: canonical("/order-online") },
 };
 
@@ -108,7 +108,7 @@ export default function OrderOnlinePage() {
               Order Online in Vancouver, WA
             </h1>
             <p className="text-lg text-tg-cream/75 leading-relaxed">
-              Thai and Laotian food for pickup or delivery from 312 W 8th St,
+              Thai food for pickup or delivery from 312 W 8th St,
               facing Esther Short Park. Orders go through our own ordering site,
               not a third-party app.
             </p>
@@ -160,7 +160,7 @@ export default function OrderOnlinePage() {
 
           <p className="mt-8 text-sm text-tg-black/55 leading-relaxed max-w-3xl">
             Menu items and availability can change. Delivery fees, minimums and
-            the delivery area are not published here — call{" "}
+            the delivery area are not published here, so call{" "}
             {primary.phone} to confirm before ordering.
           </p>
         </Container>

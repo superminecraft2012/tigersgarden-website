@@ -17,7 +17,7 @@ import {
 } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Thai & Laotian Dishes in Vancouver, WA",
+  title: "Thai Dishes in Vancouver, WA",
   description:
     "Guides to the dishes Tiger's Garden is known for in downtown Vancouver, WA: Pad Thai, Tom Yum, Massaman curry, larb and mango sticky rice.",
   alternates: { canonical: canonical("/dishes") },
@@ -50,11 +50,11 @@ export default function DishesPage() {
               Downtown Vancouver, WA
             </span>
             <h1 className="font-display uppercase leading-[0.9] tracking-[-0.02em] text-[clamp(2.2rem,6.5vw,4.5rem)] text-tg-cream">
-              Signature Thai &amp; Laotian Dishes in Vancouver, WA
+              Signature Thai Dishes in Vancouver, WA
             </h1>
             <p className="text-lg text-tg-cream/75 leading-relaxed">
               {site.cuisine} at 312 W 8th St, facing Esther Short Park. These
-              are the dishes people come looking for — what goes into each one,
+              are the dishes people come looking for: what goes into each one,
               what else it gets called, and where it comes from.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2">

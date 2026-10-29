@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: { absolute: "About Tiger's Garden" },
   alternates: { canonical: canonical("/about") },
   description:
-    "Tiger's Garden is a family-owned Thai and Laotian restaurant and cocktail lounge in downtown Vancouver, WA, facing Esther Short Park.",
+    "Tiger's Garden is a family-owned Thai restaurant and cocktail lounge in downtown Vancouver, WA, facing Esther Short Park.",
 };
 
 const thaiDishes: { name: string; slug: string }[] = [
@@ -23,13 +23,6 @@ const thaiDishes: { name: string; slug: string }[] = [
   { name: "Pad Thai", slug: "pad-thai" },
   { name: "Red Curry", slug: "red-curry" },
   { name: "Massaman Curry", slug: "massaman-curry" },
-];
-
-const laotianDishes: { name: string; slug: string }[] = [
-  { name: "Larb", slug: "larb" },
-  { name: "Papaya Salad", slug: "papaya-salad" },
-  { name: "Tom Kha Soup", slug: "tom-kha-soup" },
-  { name: "Pineapple Cashew Fried Rice", slug: "pineapple-cashew-fried-rice" },
 ];
 
 export default function AboutPage() {
@@ -154,25 +147,22 @@ export default function AboutPage() {
         <Container>
           <Reveal>
             <SectionTitle
-              eyebrow="Two cuisines, one table"
+              eyebrow="Our kitchen"
               align="center"
               tone="black"
             >
-              Thai &amp; Laotian, side by side.
+              Thai, from our family&rsquo;s kitchen.
             </SectionTitle>
           </Reveal>
 
-          <div className="mt-20 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-0">
+          <div className="mx-auto mt-20 grid max-w-xl grid-cols-1 gap-14">
             {aboutCuisine.map((cuisine, i) => {
-              const dishes = cuisine.name === "Thai" ? thaiDishes : laotianDishes;
-              const isFirst = i === 0;
+              const dishes = thaiDishes;
               return (
                 <Reveal
                   key={cuisine.name}
                   delay={0.1 * i}
-                  className={`flex flex-col gap-7 ${
-                    isFirst ? "md:pr-12 lg:pr-16" : "md:pl-12 lg:pl-16 md:border-l md:border-tg-black/15"
-                  }`}
+                  className="flex flex-col gap-7"
                 >
                   <h3 className="font-display uppercase leading-[0.9] tracking-tight text-6xl md:text-7xl text-tg-rust">
                     {cuisine.name}

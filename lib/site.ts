@@ -1,10 +1,10 @@
 export const site = {
   name: "Tiger's Garden",
   shortName: "Tiger's Garden",
-  cuisine: "Thai & Laotian Cuisine",
-  tagline: "Cozy restaurant & cocktail lounge serving Thai & Laotian dishes",
+  cuisine: "Thai Cuisine",
+  tagline: "Cozy restaurant & cocktail lounge serving Thai dishes",
   description:
-    "Tiger's Garden is a family-owned Thai & Laotian restaurant and cocktail lounge in the heart of downtown Vancouver, WA, facing Esther Short Park.",
+    "Tiger's Garden is a family-owned Thai restaurant and cocktail lounge in the heart of downtown Vancouver, WA, facing Esther Short Park.",
   url: "https://www.tigersgardenthai.com",
   orderUrl: "https://order.tigersgardenthai.com",
   reservationsUrl: "tel:+13606939585",
@@ -55,19 +55,19 @@ export const locations: Location[] = [
       "https://maps.google.com/?daddr=45.6273812310682,-122.674576899983",
     hours: {
       business: [
-        { days: "Mon – Thu", time: "11:00 am – 3:00 pm, 4:00 pm – 9:00 pm" },
-        { days: "Fri", time: "11:00 am – 3:00 pm, 4:00 pm – 9:30 pm" },
-        { days: "Sat & Sun", time: "12:00 pm – 9:30 pm" },
+        { days: "Mon - Thu", time: "11:00 am - 3:00 pm, 4:00 pm - 9:00 pm" },
+        { days: "Fri", time: "11:00 am - 3:00 pm, 4:00 pm - 9:30 pm" },
+        { days: "Sat & Sun", time: "12:00 pm - 9:30 pm" },
       ],
       carryout: [
-        { days: "Mon – Thu", time: "11:00 am – 2:45 pm, 4:00 pm – 8:45 pm" },
-        { days: "Fri", time: "11:00 am – 2:45 pm, 4:00 pm – 9:15 pm" },
-        { days: "Sat & Sun", time: "12:00 pm – 9:15 pm" },
+        { days: "Mon - Thu", time: "11:00 am - 2:45 pm, 4:00 pm - 8:45 pm" },
+        { days: "Fri", time: "11:00 am - 2:45 pm, 4:00 pm - 9:15 pm" },
+        { days: "Sat & Sun", time: "12:00 pm - 9:15 pm" },
       ],
       delivery: [
-        { days: "Mon – Thu", time: "11:00 am – 2:45 pm, 4:00 pm – 8:45 pm" },
-        { days: "Fri", time: "11:00 am – 2:45 pm, 4:00 pm – 9:15 pm" },
-        { days: "Sat & Sun", time: "12:00 pm – 9:15 pm" },
+        { days: "Mon - Thu", time: "11:00 am - 2:45 pm, 4:00 pm - 8:45 pm" },
+        { days: "Fri", time: "11:00 am - 2:45 pm, 4:00 pm - 9:15 pm" },
+        { days: "Sat & Sun", time: "12:00 pm - 9:15 pm" },
       ],
     },
   },
@@ -77,7 +77,6 @@ export const primary = locations[0];
 
 export const cuisineTags = [
   "Thai",
-  "Laotian",
   "Asian",
   "Noodles",
   "Lunch",

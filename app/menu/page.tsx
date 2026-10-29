@@ -11,9 +11,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { canonical, graph, menuNode, breadcrumbs, restaurantRef } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Thai & Laotian Menu in Vancouver, WA",
+  title: "Thai Menu in Vancouver, WA",
   description:
-    "Tiger's Garden's full Thai & Laotian menu, appetizers, soups, salads, stir-fries, curries, noodles, fried rice, desserts, and drinks.",
+    "Tiger's Garden's full Thai menu, appetizers, soups, salads, stir-fries, curries, noodles, fried rice, desserts, and drinks.",
   alternates: { canonical: canonical("/menu") },
 };
 
@@ -55,7 +55,7 @@ export default function MenuPage() {
               style={{ animationDelay: "0.05s" }}
             >
               <span className="block h-[1px] w-10 bg-current opacity-70" />
-              Thai &amp; Laotian Cuisine
+              Thai Cuisine
               <span className="block h-[1px] w-10 bg-current opacity-70" />
             </span>
 
