@@ -166,9 +166,9 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-tg-cream/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-tg-cream/40">
+        <div className="mt-16 pt-8 border-t border-tg-cream/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-tg-cream/60">
           <p>© {year} {site.name}. All rights reserved.</p>
-          <p className="font-display uppercase tracking-[0.3em] text-tg-cream/40">
+          <p className="font-display uppercase tracking-[0.3em] text-tg-cream/60">
             {site.cuisine} · Vancouver, WA
           </p>
         </div>

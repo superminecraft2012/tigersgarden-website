@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 
 function Stars({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-1 text-tg-orange" aria-label={`${rating} of 5 stars`}>
+    <div className="flex gap-1 text-tg-orange" role="img" aria-label={`${rating} of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <span key={i} aria-hidden className="text-lg">
           {i < rating ? "★" : "☆"}

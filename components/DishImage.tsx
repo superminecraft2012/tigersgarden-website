@@ -7,6 +7,8 @@ type Props = {
   /** Passed straight to next/image; ignored for placeholder art. */
   sizes: string;
   className?: string;
+  /** Override the alt text; pass "" when adjacent text already names the dish. */
+  alt?: string;
   /** Above-the-fold hero usage — the dish detail pages. */
   preload?: boolean;
 };
@@ -16,14 +18,14 @@ type Props = {
  * studio shot. Fills a positioned parent, exactly like `<Image fill>`, so the
  * call sites keep their own aspect-ratio container and tinted backdrop.
  */
-export function DishImage({ item, sizes, className = "", preload }: Props) {
+export function DishImage({ item, sizes, className = "", preload, alt }: Props) {
   if (!item.image) {
     return <ItemImage hue={item.hue} label={item.name} fill />;
   }
   return (
     <Image
       src={item.image}
-      alt={item.name}
+      alt={alt ?? item.name}
       fill
       sizes={sizes}
       className={`object-cover ${className}`}

@@ -50,11 +50,11 @@ export function MenuBrowser({ categories, categoryTaglines, items }: Props) {
       {/* Spice legend */}
       <div className="border-b border-tg-black/10 bg-white/95 backdrop-blur-md">
         <Container>
-          <div className="flex items-center gap-4 py-2 text-xs text-tg-black/50 font-display uppercase tracking-[0.18em]">
+          <div className="flex items-center gap-4 py-2 text-xs text-tg-black/60 font-display uppercase tracking-[0.18em]">
             <span>Spice:</span>
-            <span className="flex items-center gap-1 text-tg-orange">▲<span className="text-tg-black/50 normal-case tracking-normal font-sans font-normal">Mild</span></span>
-            <span className="flex items-center gap-1 text-tg-orange">▲▲<span className="text-tg-black/50 normal-case tracking-normal font-sans font-normal">Medium</span></span>
-            <span className="flex items-center gap-1 text-tg-orange">▲▲▲<span className="text-tg-black/50 normal-case tracking-normal font-sans font-normal">Spicy</span></span>
+            <span className="flex items-center gap-1 text-tg-orange">▲<span className="text-tg-black/60 normal-case tracking-normal font-sans font-normal">Mild</span></span>
+            <span className="flex items-center gap-1 text-tg-orange">▲▲<span className="text-tg-black/60 normal-case tracking-normal font-sans font-normal">Medium</span></span>
+            <span className="flex items-center gap-1 text-tg-orange">▲▲▲<span className="text-tg-black/60 normal-case tracking-normal font-sans font-normal">Spicy</span></span>
           </div>
         </Container>
       </div>
@@ -84,7 +84,11 @@ export function MenuBrowser({ categories, categoryTaglines, items }: Props) {
 
               <div className={gridClass}>
                 {filtered.map((item) => (
-                  <MenuCard key={item.slug} item={item} />
+                  <MenuCard
+                    key={item.slug}
+                    item={item}
+                    sizes="(max-width: 767px) calc(50vw - 36px), (max-width: 1023px) 33vw, 25vw"
+                  />
                 ))}
               </div>
             </Container>

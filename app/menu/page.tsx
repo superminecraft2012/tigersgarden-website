@@ -123,7 +123,7 @@ export default function MenuPage() {
                 <Button
                   href={site.cateringUrl}
                   variant="outline"
-                  className="border-tg-black/30 text-tg-black hover:border-tg-rust hover:text-tg-rust hover:bg-tg-rust/5"
+                  className="!border-tg-black/30 !text-tg-black hover:!border-tg-rust hover:!text-tg-rust hover:!bg-tg-rust/5"
                 >
                   Catering
                 </Button>

@@ -185,7 +185,7 @@ export default function LaoFoodPage() {
             </dl>
             <Reveal delay={0.3}>
               <Button href="/menu" data-track="menu_click" variant="outline"
-                className="border-tg-black/30 text-tg-black hover:border-tg-rust hover:text-tg-rust hover:bg-tg-rust/5">
+                className="!border-tg-black/30 !text-tg-black hover:!border-tg-rust hover:!text-tg-rust hover:!bg-tg-rust/5">
                 See the full menu
               </Button>
             </Reveal>

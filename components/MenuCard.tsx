@@ -5,10 +5,13 @@ import { MenuItem } from "@/lib/menu";
 export function MenuCard({
   item,
   tone = "black",
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw",
 }: {
   item: MenuItem;
   /** Surface the card sits on. "cream" is for dark or saturated backgrounds. */
   tone?: "black" | "cream";
+  /** next/image `sizes` for the card photo; override when the grid differs from the default. */
+  sizes?: string;
 }) {
   const onDark = tone === "cream";
   return (
@@ -24,7 +27,8 @@ export function MenuCard({
       >
         <DishImage
           item={item}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
+          sizes={sizes}
+          alt=""
           className="tg-card-zoom"
         />
         {item.signature && (
@@ -62,7 +66,7 @@ export function MenuCard({
         {item.short}
       </p>
       <div className={`flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[13px] sm:text-xs uppercase tracking-[0.12em] sm:tracking-[0.2em] ${
-          onDark ? "text-tg-cream/85" : "text-tg-black/40"
+          onDark ? "text-tg-cream/85" : "text-tg-black/60"
         }`}>
         <span className="min-w-0 break-words">{item.category}</span>
         {item.vegetarianAvailable && (

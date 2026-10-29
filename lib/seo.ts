@@ -192,7 +192,6 @@ export function menuItemNode(item: MenuItem, path: string) {
     description: item.description,
     image: item.image ? `${CANONICAL_ORIGIN}${item.image}` : undefined,
     menuAddOn: undefined,
-    isPartOf: { "@id": `${CANONICAL_ORIGIN}/menu#menu` },
   };
 }
 

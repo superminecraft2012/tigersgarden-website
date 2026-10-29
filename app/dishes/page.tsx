@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Thai & Laotian Dishes in Vancouver, WA",
   description:
-    "Guides to the dishes Tiger's Garden is known for in downtown Vancouver, WA — Pad Thai, Tom Yum, Massaman curry, larb, papaya salad and mango sticky rice.",
+    "Guides to the dishes Tiger's Garden is known for in downtown Vancouver, WA: Pad Thai, Tom Yum, Massaman curry, larb and mango sticky rice.",
   alternates: { canonical: canonical("/dishes") },
 };
 

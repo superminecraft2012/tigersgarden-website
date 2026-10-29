@@ -23,10 +23,16 @@ export function Reveal({
   return (
     <MotionTag
       className={className}
-      initial={reduced ? false : { opacity: 0, y }}
-      whileInView={reduced ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay }}
+      initial={{ opacity: 0, y }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "0px" }}
+      // Reduced motion: still reveal, just instantly. Branching initial or
+      // whileInView on `reduced` left SSR markup stuck at opacity 0.
+      transition={
+        reduced
+          ? { duration: 0 }
+          : { duration: 0.9, ease: [0.16, 1, 0.3, 1], delay }
+      }
     >
       {children}
     </MotionTag>

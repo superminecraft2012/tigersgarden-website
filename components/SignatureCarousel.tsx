@@ -35,13 +35,12 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
           {items.map((item, i) => {
             const isActive = i === active;
             return (
-              <button
+              <div
                 key={item.slug}
                 onClick={() => goTo(i)}
-                aria-label={isActive ? item.name : `Go to ${item.name}`}
+                aria-hidden={isActive ? undefined : true}
                 className={[
                   "shrink-0 rounded-2xl overflow-hidden text-left",
-                  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white",
                   "transition-all duration-500",
                   isActive
                     ? "bg-white shadow-[0_8px_48px_-8px_rgba(0,0,0,0.28)] cursor-default"
@@ -60,7 +59,7 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
                       }`}
                     />
                     {item.signature && (
-                      <span className="absolute top-3 left-3 rounded-full bg-tg-amber/95 px-2.5 py-0.5 font-display uppercase tracking-[0.2em] text-[9px] text-white">
+                      <span className="absolute top-3 left-3 rounded-full bg-tg-amber/95 px-2.5 py-0.5 font-display uppercase tracking-[0.2em] text-[9px] text-tg-black">
                         Signature
                       </span>
                     )}
@@ -88,8 +87,9 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
                       href={site.orderUrl} data-track="order_click"
                       target="_blank"
                       rel="noopener noreferrer"
+                      tabIndex={isActive ? undefined : -1}
                       onClick={(e) => e.stopPropagation()}
-                      className={`self-start mt-4 inline-flex min-h-[44px] items-center rounded-full px-6 py-2.5 font-display uppercase tracking-[0.15em] text-xs text-white transition-colors duration-200 ${
+                      className={`self-start mt-4 inline-flex min-h-[44px] items-center rounded-full px-6 py-2.5 font-display uppercase tracking-[0.15em] text-xs text-tg-black transition-colors duration-200 ${
                         isActive
                           ? "bg-tg-amber hover:bg-tg-orange"
                           : "bg-tg-amber/50 pointer-events-none"
@@ -99,7 +99,7 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
                     </Link>
                   </div>
                 </div>
-              </button>
+              </div>
             );
           })}
 
@@ -114,6 +114,7 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
 
       {/* ── Prev / Next arrows ── */}
       <button
+        type="button"
         onClick={() => goTo(active - 1)}
         aria-label="Previous dish"
         className="absolute left-3 md:left-6 top-[calc(50%-52px)] z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/25 text-white text-xl hover:bg-white/45 transition-colors duration-200"
@@ -121,6 +122,7 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
         ‹
       </button>
       <button
+        type="button"
         onClick={() => goTo(active + 1)}
         aria-label="Next dish"
         className="absolute right-3 md:right-6 top-[calc(50%-52px)] z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/25 text-white text-xl hover:bg-white/45 transition-colors duration-200"
@@ -130,15 +132,15 @@ export function SignatureCarousel({ items }: { items: MenuItem[] }) {
 
       {/* ── Radio dot navigation ── */}
       <div
-        role="tablist"
+        role="group"
         aria-label="Signature dishes"
         className="mt-10 flex justify-center items-center gap-0.5"
       >
         {items.map((item, i) => (
           <button
             key={item.slug}
-            role="tab"
-            aria-selected={i === active}
+            type="button"
+            aria-current={i === active ? "true" : undefined}
             aria-label={item.name}
             onClick={() => goTo(i)}
             className="grid place-items-center w-11 h-11 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"

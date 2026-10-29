@@ -12,7 +12,7 @@ import { GoogleMap } from "@/components/GoogleMap";
 import { site, primary } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Tiger's Garden",
+  title: { absolute: "About Tiger's Garden" },
   alternates: { canonical: canonical("/about") },
   description:
     "Tiger's Garden is a family-owned Thai and Laotian restaurant and cocktail lounge in downtown Vancouver, WA, facing Esther Short Park.",
@@ -64,7 +64,7 @@ export default function AboutPage() {
           className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-tg-lotus/30"
         />
 
-        <Container className="relative z-10 flex min-h-[75vh] flex-col justify-center py-16 sm:py-24 md:py-36">
+        <Container className="relative z-10 flex min-h-[75vh] flex-col justify-center pt-28 pb-16 sm:py-24 md:py-36">
           <div className="grid items-center gap-14 md:grid-cols-12">
             <div className="md:col-span-7 [animation:var(--animate-fade-up)]">
               <SectionTitle eyebrow={aboutHero.eyebrow} tone="cream" as="h1">

@@ -36,10 +36,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   icons: {
     icon: [
-      { url: "/images/branding/favicon-32x32.png", sizes: "32x32" },
-      { url: "/images/branding/favicon-16x16.png", sizes: "16x16" },
+      { url: "/images/branding/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/branding/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/images/branding/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/branding/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: "/images/branding/apple-touch-icon.png",
+    apple: [
+      { url: "/images/branding/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
     title: `${site.name}, ${site.cuisine}`,
@@ -73,8 +77,14 @@ export default function RootLayout({
       className={`${anton.variable} ${italiana.variable} ${inter.variable}`}
     >
       <body className="min-h-screen flex flex-col">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-tg-orange focus:px-5 focus:py-3 focus:font-display focus:text-sm focus:uppercase focus:tracking-[0.15em] focus:text-tg-black"
+        >
+          Skip to content
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">{children}</main>
         <Footer />
         <HappyHourPopup />
         <Script
